@@ -1,0 +1,230 @@
+:root {
+    --ispor-blue: #53a2ca;
+    --ispor-light-blue: #6EC1D6;
+    --ispor-dark-navy: #1A2A3A;
+    --ispor-soft-teal: #8FD6E1;
+    --ispor-cyan: #00C9FF;
+    --ispor-purple: #9400FF;
+    --ispor-pink: #FF00FF;
+    --ispor-light-gray: #F5F9FC;
+    --ispor-medium-gray: #A0AEC0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--ispor-dark-navy);
+    line-height: 1.5;
+}
+
+.donation-section {
+    position: relative;
+    padding: 4rem 1rem 0rem;
+    overflow: hidden;
+}
+
+.donation-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--ispor-cyan), var(--ispor-soft-teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.progress-section {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--ispor-cyan);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.progress-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 20%,
+        rgba(0,201,255,0.1) 50%,
+        transparent 80%
+    );
+    animation: shine 6s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-50%) rotate(45deg); }
+    100% { transform: translateX(150%) rotate(45deg); }
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.goal-text {
+    font-size: 1.2rem;
+    color: var(--ispor-cyan);
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 1.5rem;
+    background: rgba(0,201,255,0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--ispor-cyan), var(--ispor-soft-teal));
+    width: 50%;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.progress-bar.celebrating::after {
+    content: '🎉';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: celebrate 0.5s ease-in-out infinite;
+}
+
+@keyframes celebrate {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.2); }
+    100% { transform: translateY(-50%) scale(1); }
+}
+
+.donation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.donation-button {
+    padding: 1rem;
+    border: 2px solid var(--ispor-cyan);
+    border-radius: 15px;
+    background: transparent;
+    color: var(--ispor-cyan);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.donation-button:hover {
+    transform: translateY(-5px);
+    background: var(--ispor-cyan);
+    color: white;
+}
+
+.donation-button.active {
+    background: var(--ispor-cyan);
+    color: white;
+}
+
+.custom-amount {
+    display: none;
+    background: rgba(0,201,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.custom-amount.visible {
+    display: block;
+}
+
+.custom-amount input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--ispor-soft-teal);
+    border-radius: 15px;
+    background: transparent;
+    color: var(--ispor-dark-navy);
+    font-size: 1.1rem;
+}
+
+.testimonial {
+    background: rgba(0,201,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    position: relative;
+    border-left: 5px solid var(--ispor-soft-teal);
+}
+
+.testimonial::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--ispor-soft-teal);
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,201,255,0.2);
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--ispor-cyan);
+}
+
+.submit-donation {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(to right, var(--ispor-cyan), var(--ispor-soft-teal));
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 2rem;
+}
+
+.submit-donation:hover {
+    transform: translateY(-5px);
+}

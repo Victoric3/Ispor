@@ -1,0 +1,176 @@
+:root {
+    --color-primary: #00C9FF;
+    --color-secondary: #9400FF;
+    --color-surface: rgba(255, 255, 255, 0.05);
+}
+
+/* Leadership Grid Enhancements */
+
+.team-showcase{
+    padding: 4rem 1rem 0rem;
+
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+.team-member {
+    position: relative;
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 201, 255, 0.1);
+}
+
+.member-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hover-bio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 201, 255, 0.9), rgba(148, 0, 255, 0.9));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+}
+
+/* View All Button */
+.view-all {
+    text-align: center;
+    margin: 6rem 0 4rem;
+}
+
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, 
+        var(--color-primary),
+        var(--color-secondary)
+    );
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-all-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 201, 255, 0.3);
+}
+
+/* Join CTA Enhancements */
+.join-cta {
+    background: linear-gradient(135deg, 
+        rgba(0, 201, 255, 0.15), 
+        rgba(148, 0, 255, 0.15)
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-sub {
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.membership-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: white;
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 201, 255, 0.2);
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(45deg, 
+        var(--color-primary),
+        var(--color-secondary)
+    );
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-photo {
+        width: 160px;
+        height: 160px;
+    }
+}
