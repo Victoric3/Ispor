@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTE: Replace the empty <loc> base with your production domain for best SEO (e.g., https://your-domain.com/). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/index.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>/about.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/activities.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/outreaches.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/team.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/contact.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/publications.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>

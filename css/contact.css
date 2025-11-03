@@ -1,0 +1,6 @@
+/* Contact page specific styles */
+.hero-contact { background: var(--bg-accent-1); }
+.contact-info { display: grid; gap: 12px; }
+.contact-meta { color: var(--muted); }
+/* Enhance glass card spacing on contact */
+.card.glass.contact { padding: 20px; }

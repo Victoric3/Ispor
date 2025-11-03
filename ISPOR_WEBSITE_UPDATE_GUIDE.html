@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISPOR-HEOR UNN Website Update Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #27AAE2 0%, #0369a1 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            border-left: 4px solid #27AAE2;
+            padding-left: 30px;
+        }
+        
+        .section-title {
+            color: #27AAE2;
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-icon {
+            font-size: 1.5em;
+        }
+        
+        .subsection {
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .subsection h3 {
+            color: #0369a1;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .update-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .update-box.current {
+            background: #ffebee;
+            border-left-color: #f44336;
+        }
+        
+        .update-box.new {
+            background: #e8f5e9;
+            border-left-color: #4caf50;
+        }
+        
+        .label {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .image-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            text-align: center;
+        }
+        
+        .image-item h4 {
+            color: #27AAE2;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        
+        .link-box {
+            background: #fff9c4;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-card h4 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .stat-card p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #27AAE2;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .social-link {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #27AAE2;
+            flex: 1;
+            min-width: 200px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background: #27AAE2;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .social-link h4 {
+            color: #27AAE2;
+            margin-bottom: 10px;
+        }
+        
+        .social-link:hover h4 {
+            color: white;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .color-box {
+            flex: 1;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .toc h2 {
+            color: #27AAE2;
+            margin-bottom: 20px;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            padding: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #0369a1;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            color: #27AAE2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 ISPOR-HEOR UNN Website Update</h1>
+            <p>Complete Content Update Guide</p>
+            <p style="font-size: 0.9em; opacity: 0.8; margin-top: 10px;">November 2025</p>
+        </div>
+        
+        <div class="content">
+            <div class="toc">
+                <h2>📑 Table of Contents</h2>
+                <ul>
+                    <li><a href="#hero">1. Hero Banner & Statistics</a></li>
+                    <li><a href="#about">2. About Section (Navigation)</a></li>
+                    <li><a href="#leaders">3. Our Leaders (2024/2025)</a></li>
+                    <li><a href="#awards">4. Awards</a></li>
+                    <li><a href="#outreaches">5. Outreaches</a></li>
+                    <li><a href="#activities">6. Activities & Events</a></li>
+                    <li><a href="#resources">7. Resources</a></li>
+                    <li><a href="#gallery">8. Gallery</a></li>
+                    <li><a href="#social">9. Social Media</a></li>
+                    <li><a href="#branding">10. Branding & Colors</a></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 1: HERO BANNER -->
+            <div class="section" id="hero">
+                <h2 class="section-title">
+                    <span class="section-icon">🎯</span>
+                    1. Hero Banner & Statistics
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Hero Banner Video</h3>
+                    <div class="update-box current">
+                        <div class="label">Current</div>
+                        <p>Plain image banner</p>
+                    </div>
+                    <div class="update-box new">
+                        <div class="label">Update To</div>
+                        <p>Short looping video banner</p>
+                        <div class="link-box">
+                            https://drive.google.com/file/d/1JoKXzY8L5t5xGdImqMSkFJIJC7dBpo2l/view?usp=drivesdk
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Hero Text Content</h3>
+                    <div class="update-box new">
+                        <div class="label">New Tagline</div>
+                        <h4 style="margin: 15px 0;">ISPOR-HEOR</h4>
+                        <p style="font-style: italic; color: #666;">THE PROFESSIONAL SOCIETY FOR HEALTH ECONOMICS AND OUTCOMES RESEARCH</p>
+                        <p style="margin-top: 15px;">Advancing HEOR excellence to transform healthcare decision-making globally through education, research, and multidisciplinary collaboration.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Quick Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>20+</h4>
+                            <p>Communities Reached</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>500+</h4>
+                            <p>Active Members</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>10,000+</h4>
+                            <p>Lives Impacted</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; color: #666; font-style: italic;">⚠️ Remove "Publications" stat - replace with "500+ Active Members"</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Call to Action</h3>
+                    <div class="update-box new">
+                        <p><strong>Primary CTA:</strong> Automatic video display instead of "Watch Video" button</p>
+                        <p><strong>Secondary CTA:</strong> Link "Join Us" button to updated Membership page</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: ABOUT -->
+            <div class="section" id="about">
+                <h2 class="section-title">
+                    <span class="section-icon">ℹ️</span>
+                    2. About Section (Navigation Bar)
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Our Society</h3>
+                    <div class="update-box new">
+                        <p>ISPOR is a dynamic and global organization focused on health economics and outcomes research (HEOR).</p>
+                        <br>
+                        <p><strong>Core Mission:</strong> Advance pharmacoeconomics for better healthcare decisions. Pharmacoeconomics helps us figure out which medication gives the best result for the best price, ensuring no life is left behind because of cost.</p>
+                        <br>
+                        <h4>How We Function:</h4>
+                        <ul>
+                            <li>Campus-based chapter under ISPOR global</li>
+                            <li>7 student-driven committees</li>
+                            <li>Common goal: Healthcare excellence</li>
+                        </ul>
+                        <br>
+                        <h4>Our Impact:</h4>
+                        <ul>
+                            <li>Knowledge sharing (conferences, seminars, workshops)</li>
+                            <li>Skill building (hands-on training, research trainings)</li>
+                            <li>Community engagement (outreaches)</li>
+                            <li>Volunteerism & leadership (projects, self-development)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Who We Are: Mission, Vision & Values</h3>
+                    <div class="update-box new">
+                        <h4>Mission</h4>
+                        <p>ISPOR's mission is to advance health economics and outcomes research excellence to improve decision making for health globally.</p>
+                        <br>
+                        <h4>Vision</h4>
+                        <p>ISPOR's vision is for a world where healthcare is accessible, effective, efficient, and affordable for all.</p>
+                        <br>
+                        <h4>Values</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                            <span class="tag">Transformative</span>
+                            <span class="tag">Scientific</span>
+                            <span class="tag">Inclusive</span>
+                            <span class="tag">Collaborative</span>
+                            <span class="tag">Transparent</span>
+                            <span class="tag">Ethical</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Our Members</h3>
+                    <div class="update-box new">
+                        <p>ISPOR-HEOR UNN is home to a vibrant community of over <strong>500 active members</strong>, passionate, forward-thinking students dedicated to advancing healthcare through research, innovation, and impact.</p>
+                        <br>
+                        <p>Our members represent diverse interests across pharmacy, medicine, public health, and related disciplines, yet we're united by a common goal: to improve healthcare decision-making through evidence, data, and human-centered insights.</p>
+                        <br>
+                        <p>Within our chapter, members don't just learn — they lead. From health policy discussions and research projects to community outreaches and professional development programs, ISPOR-HEOR UNN members are actively shaping the future of healthcare.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Our Committees</h3>
+                    
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📚 Intellectual Committee</h4>
+                        <p>Organizes bi-weekly meetings, debates, quizzes, Medix Spelling Bee, educational games, health seminars, and Clinical Trivia during ISPOR Health Week.</p>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📱 Media and Publicity</h4>
+                        <p>Creates broadcasts and social media messages to increase public awareness. Manages Email, Bulk SMS, YouTube, LinkedIn, Twitter, Instagram, Telegram, and WhatsApp channels.</p>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">🚑 Outreach and Logistics</h4>
+                        <p>Leads community engagement and public health impact through medical outreaches, awareness campaigns, and industrial trips with smooth coordination.</p>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">✍️ Editorial</h4>
+                        <p>Responsible for all written content: Faceporite Awards, ISPOR News & Gists, D'ZINE, Health Digest, yearbook. Manages ISPOR website and writing competitions.</p>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">💚 Welfare</h4>
+                        <p>Takes care of all Isporites during meetings, excursions, outreaches, and industrial trips. Celebrates member birthdays.</p>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">🔬 Research</h4>
+                        <p>Forms the research team carrying out all research activities. Mandated to publish at least two health outcomes research articles per session.</p>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">🏥 IPHAC</h4>
+                        <p>Manages all public health awareness campaigns. Celebrates World Health Days, holds seminars, publishes Friday health gists (6pm), conducts podcasts and street interviews. Hosts "Health Quake" talk show on controversial health topics.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Our Impact</h3>
+                    <div class="update-box new">
+                        <p>At ISPOR-HEOR UNN, impact is at the heart of everything we do. Through our outreach programs, research initiatives, and health awareness campaigns, we've reached over <strong>20 communities</strong> and schools, touching the lives of more than <strong>10,000 people</strong> across different regions.</p>
+                        <br>
+                        <p>From promoting health education and preventive care to advancing conversations around healthcare access, our members continue to bridge the gap between knowledge and real-world change.</p>
+                        <br>
+                        <p>Each outreach, seminar, and community project is a step toward a healthier society — where informed decisions, compassion, and science work hand in hand to improve lives.</p>
+                        <br>
+                        <p><strong>ISPOR-HEOR UNN isn't just a student chapter; it's a movement of young professionals driving measurable impact in healthcare, one community at a time.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: LEADERS -->
+            <div class="section" id="leaders">
+                <h2 class="section-title">
+                    <span class="section-icon">👥</span>
+                    3. Our Leaders (2024/2025 Session)
+                </h2>
+                
+                <p style="background: #fff3cd; padding: 15px; border-radius: 5px; margin-bottom: 30px;">
+                    ⚠️ <strong>Important:</strong> Categorize by session - current pictures on page should be labeled as 2023/2024. Add new 2024/2025 session leaders below.
+                </p>
+
+                <div class="image-grid">
+                    <div class="image-item">
+                        <h4>Favour Chinemeogo Augustine</h4>
+                        <p>Secretary General</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1qk6C2xAcQPlVef1T-7ECdzAiCn2GwSmJ/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Idogwu Ogechukwu Luciana</h4>
+                        <p>Assistant Secretary General</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/13tR7mz_UkixFxwUhHKTe-r7pSKKQKviH/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Genevieve Akajiobi Somtochukwu</h4>
+                        <p>Field Marshal I</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1EyJUtEolI5oG8fKNbgIcQFqngtYi63if/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Eze Pascal Chisom</h4>
+                        <p>Media & Publicity Chair I</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1RZDANGKvM5JRP_1q6D8CjMPPIHCfjnV1/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Okwudili Favour Chinagorom</h4>
+                        <p>Media & Publicity Chair II</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1GdW84dkeT4SgRGq3vqeQvzJmyiiHyC-3/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Kama Favour Ijeoma</h4>
+                        <p>Asst. Media & Publicity Chair</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1cHvlXXMw2fRmOw_BvOfpYg38DHWPIVNS/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Sunday James Ebenezer</h4>
+                        <p>Research Chairperson</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1DeBz8U0IQ6GJXPP69c5XckQdBGJ323Da/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Okafor Pleasant Ucheomachukwu</h4>
+                        <p>Research Chairperson II</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1kF8B7Y6qof545PbpOlacDjBdgCY6Lxzi/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Okoli Jennifer Ujunwa</h4>
+                        <p>Asst. Research Chairperson</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1WX4vtpz19eiR7viJbE1q-4xVTueWtmBh/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Ali Sarah Ifeoma</h4>
+                        <p>IPHAC Chairperson I</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1o5a6pIN2XP2dvTltEyoVqC0AM5xngg0Z/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Nwinyinya Ifeoma Precious</h4>
+                        <p>Asst. IPHAC Chairperson</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1N99VFV4DppZl8VAlC8ozwFIaI_pmvAsp/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Ferdinand Joy Chidimma</h4>
+                        <p>Editor-in-Chief I</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/16KDbCzRB3fufJ_CIAT35AjOuhpiMel83/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Ogunjobi Bamidele Victor</h4>
+                        <p>Editor-in-Chief II</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1ulL9r6v8rnZI98zX97syDhewUqx8p-ru/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Ojukwu Chisom Yvonne</h4>
+                        <p>Asst. Editorial Chairperson</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/18UGS4kP1BUKLOpNc2vyHFzrmT4Ko4bmj/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Okwor Victor Oluchukwu</h4>
+                        <p>Financial Secretary</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1m4qg13juOHbVErwvNTgDJRkrvt6seIp2/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Anaelechi Shalom Ebubechi</h4>
+                        <p>Welfare Chairperson</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1vYGwKpAjVawNvwpkPgaSfwKCX2p5qJWl/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Chukwuma Adaobi Maryann</h4>
+                        <p>Asst. Welfare Chairperson</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1Lnk-7OnUMMHBRK57TQbzCTf865gQqE32/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Obeleagu Chukwuka Brandon</h4>
+                        <p>Provost I</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1eKuXcBXQHK8UM8ItSCAOX6cF7tcsGK1T/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Nzekeeh Chidera Nancy</h4>
+                        <p>Fifth Year Class Ambassador</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1PPYRRdqSkAVIlf6OXIonJjRBr4fvp5i4/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Ibezim Precious Ugochinyere</h4>
+                        <p>Fourth Year Class Ambassador</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1FAax5BdtlZwVVuF9CAobJUgWDXlvmC90/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Chinwuba Tobechukwu Daniel</h4>
+                        <p>Third Year Class Ambassador</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1yL2hrxQK4jgdoWYE6nP91c26k7jAcr5o/view?usp=drive_link
+                        </div>
+                    </div>
+
+                    <div class="image-item">
+                        <h4>Odigbo Ezinne Anthonete</h4>
+                        <p>Non-Pharmacy Isporite Ambassador II</p>
+                        <div class="link-box" style="font-size: 0.7em;">
+                            https://drive.google.com/file/d/1l4hKX5B0RIYq0itb1kX345r5yiYWw7Cn/view?usp=drive_link
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: AWARDS -->
+            <div class="section" id="awards">
+                <h2 class="section-title">
+                    <span class="section-icon">🏆</span>
+                    4. Awards
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Annual Awards</h3>
+                    
+                    <div style="margin: 20px 0; padding: 20px; background: #fff3cd; border-radius: 10px;">
+                        <h4 style="color: #856404;">🎓 The Gabriel Ezenri Annual Prize For Excellence In Research</h4>
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px; background: #d1ecf1; border-radius: 10px;">
+                        <h4 style="color: #0c5460;">⭐ The Emmanuel Okala Annual Prize For Most Active Isporite</h4>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>2024/2025 Award Winners</h3>
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <h4>Egwuonwu Emmanuella Chiamaka</h4>
+                            <p>6th Year</p>
+                            <div class="link-box" style="font-size: 0.7em;">
+                                https://drive.google.com/file/d/1tCL6gE-CfJbODIMGirBMwnhapYGMvsIK/view?usp=drivesdk
+                            </div>
+                        </div>
+
+                        <div class="image-item">
+                            <h4>Ohia Favour Amarachi</h4>
+                            <p>5th Year</p>
+                            <div class="link-box" style="font-size: 0.7em;">
+                                https://drive.google.com/file/d/1e3UbViaIgmFTqEEjmpZJmKQvIFqlGFr8/view?usp=drivesdk
+                            </div>
+                        </div>
+
+                        <div class="image-item">
+                            <h4>Onah Prisca Chibundu</h4>
+                            <p>4th Year</p>
+                            <div class="link-box" style="font-size: 0.7em;">
+                                https://drive.google.com/file/d/1mMKz1vw9DLIfGYe5WOXCFLLBqmBG2PH8/view?usp=drivesdk
+                            </div>
+                        </div>
+
+                        <div class="image-item">
+                            <h4>Nnadozie Amarachi Jessica</h4>
+                            <p>3rd Year</p>
+                            <div class="link-box" style="font-size: 0.7em;">
+                                https://drive.google.com/file/d/1Mzr4jkrXq7qXCBN1ksSYtCxOZBnz9J7A/view?usp=drivesdk
+                            </div>
+                        </div>
+
+                        <div class="image-item">
+                            <h4>Agada Isaac</h4>
+                            <p>Non-Pharmacy Isporite</p>
+                            <div class="link-box" style="font-size: 0.7em;">
+                                https://drive.google.com/file/d/1x8AXfoDzLLUSc14WFC4L2v6ZpdCR2Abf/view?usp=drivesdk
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 5: OUTREACHES -->
+            <div class="section" id="outreaches">
+                <h2 class="section-title">
+                    <span class="section-icon">🚑</span>
+                    5. Outreaches
+                </h2>
+                
+                <div class="subsection">
+                    <h3>ISPOR 1000 4.0 - Project Dent O'Clock</h3>
+                    <div class="update-box new">
+                        <h4>Promoting Oral Hygiene Knowledge Among School Children in Nsukka, Nigeria</h4>
+                        <br>
+                        <p>By The Professional Society for Health Economics and Outcomes Research (ISPOR-HEOR) UNN Chapter</p>
+                        <br>
+                        <p>In June 2025, the ISPOR-HEOR UNN Chapter in collaboration with Colgate Nigeria carried out its ISPOR-1000 community outreach project called "Project Dent O'Clock." This initiative aimed to promote awareness of oral hygiene and improve oral health practices among primary school pupils through education, demonstrations, and community involvement.</p>
+                        <br>
+                        <p>As part of the outreach, the Chapter conducted a research study titled "An Evaluation of Oral Hygiene Knowledge and Practices among In-School Adolescents in Nsukka, Enugu State, Nigeria." This study aimed to evaluate pupils' understanding, attitudes, and habits related to oral hygiene. It also sought to identify gaps that targeted health education could address.</p>
+                        <br>
+                        <p>Oral health is a vital part of public health in Nigeria, yet it often gets overlooked. Even with increasing awareness of general health, issues like dental caries, bad breath, and gum disease are still common among children. These problems can lead to discomfort, missed school days, and a lower quality of life. Aware of these challenges, Project Dent O'Clock was created to close the knowledge gap by offering evidence-based oral health education combined with interactive learning.</p>
+                        <br>
+                        <p>The outreach took place at St. Joseph's Primary School and Chidubem Primary School, both located in Nsukka, Enugu State. The team used a structured questionnaire to measure pupils' oral hygiene knowledge and practices. This was followed by interactive sessions that included demonstrations on proper brushing techniques, discussions about the importance of routine dental check-ups, and explanations of how diet affects oral health.</p>
+                        <br>
+                        <p>Early observations showed that most pupils knew regular brushing was important, but fewer understood the benefits of flossing, when to replace their toothbrush, and how their diet impacts dental health. Fortunately, pupils showed great enthusiasm for the sessions and expressed a desire for more oral health education in the future.</p>
+                        <br>
+                        <p>Project Dent O'Clock highlights the ISPOR-UNN Student Chapter's dedication to promoting health in the community using evidence-based methods. By combining outreach and research, the Chapter illustrates how student-led efforts can significantly improve public health and raise awareness at the local level.</p>
+                        <br>
+                        <p><strong>Written by:</strong></p>
+                        <ul>
+                            <li>Sunday James Ebenezer - Research Chairperson 1</li>
+                            <li>Okafor Pleasant Ucheomachukwu - Research Chairperson 2</li>
+                            <li>Okoli Jennifer - Assistant Research Chairperson</li>
+                        </ul>
+                        <br>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1ogdeiPliHoFfNBP-U0Cqh8xKB2v_kHWd
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Community Outreaches</h3>
+                    
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">💗 Reproductive Health Outreach</h4>
+                        <p><strong>Date:</strong> August 29th, 2024</p>
+                        <p><strong>Location:</strong> University of Nigeria, Nsukka (UNN)</p>
+                        <p>Provided students with opportunity to discover safe contraceptive options, separate facts from myths, and become informed advocates for healthier choices.</p>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1DuViGepRKYCQkhJL0t5i2nBT6gGuzUMi
+                        </div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">🏥 Community Outreach - IBAGWA-ANI</h4>
+                        <p>Outreach in collaboration with DEEJAY foundation at IBAGWA-ANI: Conducting vital signs check for the community.</p>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1Eu8SC9xqdJEpGk1ECoQ4YSWvwLL_2EXy
+                        </div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📊 Vital Signs Outreach at UNN</h4>
+                        <div class="link-box">
+                            https://drive.google.com/file/d/1M9Rd6RqMp9hN2nhnFQGg2OrY_XinFf4x/view?usp=drivesdk
+                        </div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">🧠 Mental Health Day Outreach</h4>
+                        <p><strong>Date:</strong> October 11th, 2025</p>
+                        <p>Mental Health Day Outreach for ISPORITES</p>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/11_27EVGZjR4gxd5z4n7ftTKHSbPPq2_7
+                        </div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">⛪ Vital Signs Outreach - Assemblies of God Church</h4>
+                        <p><strong>Location:</strong> Ekpo Ref, UNN</p>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1dN9DyK07NkJ5ohXPdPbhN-MGg5SyVgQu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Health Walks</h3>
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">🚶 Health Walk on Infectious Diseases</h4>
+                        <p><strong>Date:</strong> October 29th, 2025</p>
+                        <p><strong>Location:</strong> University of Nigeria, Nsukka</p>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1V4En_jAdSNoGPgwdKqOvLkclN5_w5Trf
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: ACTIVITIES -->
+            <div class="section" id="activities">
+                <h2 class="section-title">
+                    <span class="section-icon">📅</span>
+                    6. Activities & Events
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Upcoming Events</h3>
+                    <p style="font-style: italic; color: #666;">To be updated with current event calendar</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Past Events</h3>
+                    
+                    <div style="margin: 20px 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
+                        <h4>🎉 Health Week</h4>
+                        <p><strong>Date:</strong> October 26 - November 1, 2025</p>
+                        <p>A week-long celebration of health featuring various activities, seminars, and community engagement programs.</p>
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 10px;">
+                        <h4>🎓 Health Conference</h4>
+                        <p><strong>Date:</strong> November 1st, 2025</p>
+                        <p>Major health conference featuring expert speakers, research presentations, and networking opportunities.</p>
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 15px; background: #e3f2fd; border-radius: 10px;">
+                        <p><strong>💡 Tip:</strong> Add direct link to outreaches page above for easy navigation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 7: RESOURCES -->
+            <div class="section" id="resources">
+                <h2 class="section-title">
+                    <span class="section-icon">📚</span>
+                    7. Resources
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Publications</h3>
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📖 ISPOR DZINE 2025</h4>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/10JlxJuCoxnyuPhkj7SXSqtFEeaR6L0qd
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Newsletters - ISPOR NEWS AND GIST</h3>
+                    
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📰 April 2025 Edition</h4>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1UrXjfL9_1ad2JdvMDdy4vMEemUwXW3e4
+                        </div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📰 May 2025 Edition</h4>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1Yz9HtNzTAaMtVGvctRryAIBaegYgpSuw
+                        </div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📰 September 2025 Edition</h4>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1FIyXaURpvvCBsx09gtZA5qN3HDd4qpbg
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Articles</h3>
+                    
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">📄 ISPOR 1000 4.0 (Project Dent O'Clock)</h4>
+                        <p>Complete article content provided in Outreaches section above</p>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1B_-9l3fbuAW4dJl-d96IKiCqmN2yQR4L
+                        </div>
+                    </div>
+
+                    <div style="margin: 20px 0;">
+                        <h4 style="color: #27AAE2; margin-bottom: 10px;">🥤 HEALTH DIGEST - Soft Drinks: Our Friendly Enemy</h4>
+                        <div class="link-box">
+                            https://drive.google.com/drive/folders/1n66smWOpWybUEYvyTruD1tGrwP44wXAx
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="subsection">
+                    <h3>Guides</h3>
+                    <p style="background: #fff3cd; padding: 15px; border-radius: 5px;">
+                        ⚠️ Keep inactive until content is ready (will be sent later)
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION 8: GALLERY -->
+            <div class="section" id="gallery">
+                <h2 class="section-title">
+                    <span class="section-icon">🖼️</span>
+                    8. Gallery
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Photo Grid Organization</h3>
+                    <div class="update-box current">
+                        <div class="label">Current Photos</div>
+                        <p>Maintain and categorize as <strong>2023/2024 Session</strong></p>
+                    </div>
+                    <div class="update-box new">
+                        <div class="label">New Photos - 2024/2025 Session</div>
+                        <div class="link-box">
+                            Featured Image: https://drive.google.com/file/d/1Qfbp82q8dTecCNu_AtRw0G0b3Pr_Xfnm/view?usp=drivesdk
+                        </div>
+                        <div class="link-box">
+                            Gallery Folder: https://drive.google.com/drive/folders/1ogdeiPliHoFfNBP-U0Cqh8xKB2v_kHWd
+                        </div>
+                        <p style="margin-top: 15px;"><strong>Organization:</strong> Categorize by year (2024/2025 session)</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Video Section</h3>
+                    <div class="update-box new">
+                        <p><strong>Add embedded video highlights:</strong></p>
+                        <div class="link-box">
+                            Video 1: https://drive.google.com/file/d/1JoKXzY8L5t5xGdImqMSkFJIJC7dBpo2l/view?usp=drivesdk
+                        </div>
+                        <div class="link-box">
+                            Video 2: https://drive.google.com/file/d/1m59XcT28Wsj-UHRSqW9fyRXOD-8VgLr9/view?usp=drivesdk
+                        </div>
+                        <p style="margin-top: 10px; font-style: italic;">💡 Optional autoplay for hero video</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 9: SOCIAL MEDIA -->
+            <div class="section" id="social">
+                <h2 class="section-title">
+                    <span class="section-icon">📱</span>
+                    9. Social Media Handles
+                </h2>
+                
+                <div class="social-links">
+                    <a href="https://www.instagram.com/ispor_heor_unn?igsh=eG1tOTRvbHBjeDhn&utm_source=qr" target="_blank" class="social-link">
+                        <h4>📷 Instagram</h4>
+                        <p>@ispor_heor_unn</p>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/ispor-heor-unn/" target="_blank" class="social-link">
+                        <h4>💼 LinkedIn</h4>
+                        <p>ispor(heor)unn</p>
+                    </a>
+
+                    <a href="https://x.com/ispor_heor_unn?s=21&t=1iSh1wFAxayc9za9q2cgeQ" target="_blank" class="social-link">
+                        <h4>🐦 Twitter (X)</h4>
+                        <p>@ispor_heor_unn</p>
+                    </a>
+
+                    <a href="https://youtube.com/@isporunnstudentchapter8756?si=RA5_B0aslm15tDkD" target="_blank" class="social-link">
+                        <h4>📺 YouTube</h4>
+                        <p>ISPOR UNN STUDENT CHAPTER</p>
+                    </a>
+
+                    <a href="https://www.tiktok.com/@isporheorunn?_t=ZM-8tURnL7pFzB&_r=1" target="_blank" class="social-link">
+                        <h4>🎵 TikTok</h4>
+                        <p>@isporheorunn</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECTION 10: BRANDING -->
+            <div class="section" id="branding">
+                <h2 class="section-title">
+                    <span class="section-icon">🎨</span>
+                    10. Branding & Colors
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Official Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-box" style="background-color: #27AAE2;">
+                            #27AAE2
+                            <br>
+                            <span style="font-size: 0.8em;">Primary Blue</span>
+                        </div>
+                        <div class="color-box" style="background-color: #FFFFFF; color: #333; border: 2px solid #ddd;">
+                            #FFFFFF
+                            <br>
+                            <span style="font-size: 0.8em;">White</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 5px;">
+                        <strong>Usage Guidelines:</strong><br>
+                        • Primary Blue (#27AAE2) for headers, CTAs, and brand elements<br>
+                        • White (#FFFFFF) for backgrounds and contrast<br>
+                        • Maintain consistency across all pages and materials
+                    </p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Additional Improvements</h3>
+                    <ul>
+                        <li>✅ Increase font sizes for better readability</li>
+                        <li>✅ Use color palette consistently throughout site</li>
+                        <li>✅ Ensure proper contrast ratios for accessibility</li>
+                        <li>✅ Add animations to statistics counters</li>
+                        <li>✅ Implement smooth scrolling between sections</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- STORE/MERCH SECTION -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🛍️</span>
+                    11. Store / Merch Page
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Store Section (Coming Soon)</h3>
+                    <div class="update-box new">
+                        <p><strong>Add "ISPOR Store" page with:</strong></p>
+                        <ul>
+                            <li>Merchandise preview gallery</li>
+                            <li>Price tags for each item</li>
+                            <li>Contact form for manual orders</li>
+                            <li>Email for inquiries</li>
+                        </ul>
+                        <br>
+                        <p><strong>Payment Option:</strong> Manual purchase for now (contact form or email)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT PAGE -->
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">📞</span>
+                    12. Contact Page
+                </h2>
+                
+                <div class="subsection">
+                    <h3>Contact Information</h3>
+                    <p style="background: #fff3cd; padding: 15px; border-radius: 5px;">
+                        ⚠️ To be updated with official contact details, office location, and contact form
+                    </p>
+                </div>
+            </div>
+
+            <!-- IMPLEMENTATION NOTES -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 15px; margin-top: 50px;">
+                <h2 style="margin-bottom: 20px;">📋 Implementation Notes</h2>
+                <ul style="line-height: 2;">
+                    <li>✅ All Google Drive links need to be converted to embedded images/videos</li>
+                    <li>✅ Implement lazy loading for images to improve page speed</li>
+                    <li>✅ Add proper alt text for all images for SEO and accessibility</li>
+                    <li>✅ Create separate pages for Resources, Gallery, and Team sections</li>
+                    <li>✅ Implement filtering system for gallery by year/category</li>
+                    <li>✅ Add breadcrumb navigation for better UX</li>
+                    <li>✅ Ensure mobile responsiveness across all sections</li>
+                    <li>✅ Add loading animations for better user experience</li>
+                    <li>✅ Implement SEO meta tags for all pages</li>
+                    <li>✅ Create sitemap for search engines</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; padding: 40px; background: #f8f9fa; border-radius: 15px; margin-top: 30px;">
+                <h3 style="color: #27AAE2; margin-bottom: 15px;">🚀 Ready to Launch!</h3>
+                <p style="font-size: 1.1em; color: #666;">This comprehensive guide contains all updates needed for the ISPOR-HEOR UNN website.</p>
+                <p style="margin-top: 15px; color: #999;">For technical implementation assistance, contact the web development team.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

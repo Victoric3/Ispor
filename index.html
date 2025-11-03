@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="tw-dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -16,19 +16,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ISPOR-HEOR" />
     <meta property="og:image" content="./assets/logo/logo_icon.png" />
+  <meta name="keywords" content="ISPOR UNN, ISPOR-HEOR UNN, isporunn, UNN ISPOR, ISPOR University of Nigeria Nsukka, Health Economics and Outcomes Research, HEOR Nsukka" />
+  <meta property="og:site_name" content="ISPOR-HEOR UNN (ISPORUNN)" />
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-
-    <link rel="stylesheet" href="css/tailwind-build.css">
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/mission.css" />
-    <link rel="stylesheet" href="css/president-msg.css" />
-    <link rel="stylesheet" href="css/outreach.css" />
-    <link rel="stylesheet" href="css/team.css" />
-    <link rel="stylesheet" href="css/donation.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
         integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
@@ -38,7 +31,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <!-- head section -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.8/countUp.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -49,813 +41,333 @@
     </script>
 </head>
 
-<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] 
-            tw-text-black dark:tw-bg-black  dark:tw-text-white">
-
-    <header class="lg:tw-px-4 tw-max-w-[100vw] tw-fixed tw-top-0 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[80px] tw-w-full 
-            tw-text-gray-700 tw-bg-ispor-light-gray/80 dark:tw-text-gray-200 dark:tw-bg-ispor-dark-navy/80 tw-px-[3%] tw-rounded-b-lg lg:tw-max-w-6xl tw-shadow-lg dark:tw-shadow-ispor-blue/20
-            lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99] tw-border-b tw-border-ispor-blue/10">
-        <!-- Logo -->
-        <a class="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" href="#">
-            <div class="tw-h-[70px] tw-max-w-[120px]">
-                <img src="./assets/logo/logo.png" alt="ISPOR-UNN Logo"
-                    class="tw-object-contain tw-h-full tw-w-full" />
+<body>
+    <header class="header">
+      <div class="container header-inner">
+          <a class="brand" href="#" aria-label="ISPOR-UNN Home"><img src="./assets/logo/logo.png" alt="ISPOR-UNN Logo" /></a>
+          <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+          <nav class="nav" aria-label="Primary">
+          <details>
+            <summary><span>About</span><i class="bi bi-chevron-down"></i></summary>
+            <div class="dropdown" role="menu">
+              <a href="about.html#society"><i class="bi bi-building" style="color:var(--brand-blue)"></i> Our Society</a>
+              <a href="about.html#leadership"><i class="bi bi-people-fill" style="color:var(--brand-blue)"></i> Leadership</a>
+              <a href="about.html#mission"><i class="bi bi-compass" style="color:var(--brand-blue)"></i> Mission/Vision</a>
+              <a href="about.html#committees"><i class="bi bi-diagram-3" style="color:var(--brand-blue)"></i> Committees</a>
+              <a href="about.html#awards"><i class="bi bi-trophy" style="color:var(--brand-blue)"></i> Awards</a>
+              <a href="contact.html"><i class="bi bi-envelope" style="color:var(--brand-blue)"></i> Contact</a>
             </div>
-        </a>
-
-        <!-- Navigation Links -->
-        <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
-            <nav class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
-            max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center">
-                <a class="header-links hover:tw-text-ispor-blue tw-transition-colors" href="#mission">Mission</a>
-                <a class="header-links hover:tw-text-ispor-blue tw-transition-colors" href="#outreach">Outreach</a>
-
-                <!-- Features Dropdown -->
-                <div class="tw-relative tw-flex tw-flex-col tw-place-items-center">
-                    <div id="nav-dropdown-toggle-0"
-                        class="max-lg:tw-max-w-fit tw-flex header-links hover:tw-text-ispor-blue tw-gap-1 tw-place-items-center">
-                        <span class="">Activities</span>
-                        <i class="tw-text-sm bi bi-chevron-down"></i>
-                    </div>
-                    <nav id="nav-dropdown-list-0" data-open="false" class="tw-scale-0 tw-opacity-0  lg:tw-fixed tw-flex lg:tw-top-[80px] lg:tw-left-1/2 lg:tw--translate-x-1/2 
-                                tw-w-[50%] tw-rounded-lg max-lg:tw-h-0 max-lg:tw-w-0
-                                lg:tw-h-[400px] tw-overflow-hidden
-                                 tw-bg-white dark:tw-bg-[#17181B] tw-duration-300 
-                                 tw-transition-opacity tw-transition-height tw-shadow-lg tw-p-4">
-                        <div
-                            class="tw-grid max-xl:tw-flex max-xl:tw-flex-col tw-justify-around tw-grid-cols-2 tw-w-full">
-                            <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4 hover:tw-bg-ispor-blue/10 tw-rounded-lg"
-                                href="#outreach">
-                                <div class="tw-font-semibold tw-text-3xl tw-text-ispor-blue">
-                                    <i class="bi bi-heart-pulse"></i>
-                                </div>
-                                <div class="tw-flex tw-flex-col tw-gap-2">
-                                    <div
-                                        class="tw-text-lg tw-text-ispor-dark-gray dark:tw-text-ispor-light-gray tw-font-medium">
-                                        Medical
-                                        Camps</div>
-                                    <p class="tw-text-ispor-medium-gray dark:tw-text-ispor-medium-gray">Free health
-                                        screenings in rural
-                                        areas</p>
-                                </div>
-                            </a>
-
-                            <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4 hover:tw-bg-ispor-blue/10 tw-rounded-lg"
-                                href="#outreach">
-                                <div class="tw-font-semibold tw-text-3xl tw-text-ispor-blue">
-                                    <i class="bi bi-book"></i>
-                                </div>
-                                <div class="tw-flex tw-flex-col tw-gap-2">
-                                    <div
-                                        class="tw-text-lg tw-text-ispor-dark-gray dark:tw-text-ispor-light-gray tw-font-medium">
-                                        Workshops
-                                    </div>
-                                    <p class="tw-text-ispor-medium-gray dark:tw-text-ispor-medium-gray">Hands-on
-                                        training for healthcare
-                                        professionals</p>
-                                </div>
-                            </a>
-
-                            <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4 hover:tw-bg-ispor-blue/10 tw-rounded-lg"
-                                href="#outreach">
-                                <div class="tw-font-semibold tw-text-3xl tw-text-ispor-blue">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <div class="tw-flex tw-flex-col tw-gap-2">
-                                    <div
-                                        class="tw-text-lg tw-text-ispor-dark-gray dark:tw-text-ispor-light-gray tw-font-medium">
-                                        Seminars
-                                    </div>
-                                    <p class="tw-text-ispor-medium-gray dark:tw-text-ispor-medium-gray">Expert-led
-                                        sessions on health
-                                        economics</p>
-                                </div>
-                            </a>
-
-                            <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4 hover:tw-bg-ispor-blue/10 tw-rounded-lg"
-                                href="#outreach">
-                                <div class="tw-font-semibold tw-text-3xl tw-text-ispor-blue">
-                                    <i class="bi bi-globe"></i>
-                                </div>
-                                <div class="tw-flex tw-flex-col tw-gap-2">
-                                    <div
-                                        class="tw-text-lg tw-text-ispor-dark-gray dark:tw-text-ispor-light-gray tw-font-medium">
-                                        Global
-                                        Collaborations</div>
-                                    <p class="tw-text-ispor-medium-gray dark:tw-text-ispor-medium-gray">Partnerships
-                                        with 150+ communities
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </nav>
-                </div>
-
-                <a class="header-links hover:tw-text-ispor-blue tw-transition-colors" href="#team">Team</a>
-                <a class="header-links hover:tw-text-ispor-blue tw-transition-colors" href="#president-msg">Leadership</a>
-            </nav>
-
-            <!-- CTA Buttons -->
-            <div class="lg:tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full 
-            max-md:tw-flex-col max-md:tw-place-content-center">
-                <button type="button" onclick="toggleMode()"
-                    class="header-links tw-text-ispor-dark-gray dark:tw-text-ispor-light-gray" title="toggle-theme"
-                    id="theme-toggle">
-                    <i class="bi bi-sun" id="toggle-mode-icon"></i>
-                </button>
-                <a href="#donate" aria-label="Donate to ISPOR" class="btn tw-flex tw-gap-3 tw-px-4 tw-py-2 tw-transition-transform 
-                    tw-duration-[0.3s] hover:tw-translate-x-2 tw-bg-ispor-blue tw-text-white tw-rounded-lg">
-                    <span>Donate</span>
-                    <i class="bi bi-heart-fill"></i>
-                </a>
+          </details>
+          <details>
+            <summary><span>Outreaches</span><i class="bi bi-chevron-down"></i></summary>
+            <div class="dropdown" role="menu">
+              <a href="outreaches.html#ispor1000"><i class="bi bi-heart-pulse" style="color:var(--brand-blue)"></i> ISPOR 1000</a>
+              <a href="outreaches.html#community"><i class="bi bi-house-heart" style="color:var(--brand-blue)"></i> Community Outreaches</a>
+              <a href="outreaches.html#healthwalks"><i class="bi bi-person-walking" style="color:var(--brand-blue)"></i> Health Walks</a>
             </div>
-        </div>
-
-        <!-- Mobile Menu Toggle -->
-        <button
-            class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-ispor-dark-gray lg:tw-hidden"
-            onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+          </details>
+          <details>
+            <summary><span>Activities</span><i class="bi bi-chevron-down"></i></summary>
+            <div class="dropdown" role="menu">
+              <a href="activities.html#upcoming"><i class="bi bi-calendar-event" style="color:var(--brand-blue)"></i> Upcoming Events</a>
+              <a href="activities.html#past"><i class="bi bi-calendar-check" style="color:var(--brand-blue)"></i> Past Events</a>
+              <a href="activities.html#conference"><i class="bi bi-mic" style="color:var(--brand-blue)"></i> Conference</a>
+              <a href="outreaches.html"><i class="bi bi-hospital" style="color:var(--brand-blue)"></i> Outreaches</a>
+            </div>
+          </details>
+          <details>
+            <summary><span>Publications</span><i class="bi bi-chevron-down"></i></summary>
+            <div class="dropdown" role="menu">
+              <a href="publications.html#journals"><i class="bi bi-journal-text" style="color:var(--brand-blue)"></i> Journals</a>
+              <a href="publications.html#news"><i class="bi bi-newspaper" style="color:var(--brand-blue)"></i> News</a>
+            </div>
+          </details>
+        </nav>
+        <div><a class="btn donate-link" href="#"><span>Donate</span><i class="bi bi-heart-fill"></i></a></div>
+      </div>
     </header>
+    <div class="mobile-backdrop"></div>
 
-    <section
-        class="reveal-up hero-section tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden"
-        id="hero-section">
+    <section id="hero-section">
 
         <!-- Particles.js Background -->
-        <div id="particles-js" class="tw-absolute tw-inset-0 tw-z-0 tw-opacity-20"></div>
+        <div id="particles-js"></div>
 
         <!-- Video Modal -->
-        <div class="tw-fixed tw-bg-[#000000af] dark:tw-bg-[#80808085] tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-z-20 tw-transition-opacity
-                tw-duration-300 tw-scale-0 tw-opacity-0 tw-p-2
-                tw-w-full tw-h-full tw-flex tw-place-content-center tw-place-items-center" id="video-container-bg">
-
-            <div class="tw-max-w-[80vw] max-lg:tw-max-w-full max-lg:tw-w-full tw-scale-0 tw-transition-transform tw-duration-500 tw-p-6 tw-rounded-xl  max-lg:tw-px-2 tw-w-full tw-gap-2 tw-shadow-md 
-                            tw-h-[90vh] max-lg:tw-h-auto max-lg:tw-min-h-[400px] tw-bg-white dark:tw-bg-[#16171A] tw-max-h-full
-                            " id="video-container">
-                <div class="tw-w-full tw-flex">
-                    <button type="button" onclick="closeVideo()" class="tw-ml-auto tw-text-xl" title="close">
-                        <i class="bi bi-x-circle-fill"></i>
-                    </button>
-                </div>
-                <div
-                    class="tw-flex tw-w-full  tw-rounded-xl tw-px-[5%] max-md:tw-px-2 tw-min-h-[300px] tw-max-h-[90%] tw-h-full">
-
-                    <div class="tw-relative tw-bg-black tw-min-w-full tw-min-h-full tw-overflow-clip tw-rounded-md">
-                        <!-- add your youtube video link here -->
-                        <iframe
-                            class="tw-absolute tw-top-[50%] tw--translate-y-[50%] tw-left-[50%] tw--translate-x-[50%] tw-w-full tw-h-full"
-                            src="https://www.youtube.com/embed/ZlQamnS8ck8?si=sVxTLuLXifNPWxEL&amp;controls=0&rel=0&showinfo=0&autoplay=1&loop=1&mute=1"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-
-                </div>
-            </div>
+        <div id="video-container-bg">
+          <div id="video-container">
+            <div style="display:flex; width:100%;"><button type="button" onclick="closeVideo()" title="close" style="margin-left:auto; font-size:18px; background:none; border:none; cursor:pointer;"><i class="bi bi-x-circle-fill"></i></button></div>
+            <iframe src="https://www.youtube.com/embed/ZlQamnS8ck8?si=sVxTLuLXifNPWxEL&amp;controls=0&rel=0&showinfo=0&autoplay=1&loop=1&mute=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="YouTube video player"></iframe>
+          </div>
         </div>
 
-        <div
-            class="tw-relative tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4">
-
-            <!-- Animated Stats Bar with Icons -->
-            <div
-                class="reveal-up tw-mb-8 tw-w-full tw-max-w-4xl tw-mx-auto tw-bg-white/70 dark:tw-bg-black/70 tw-backdrop-blur-sm tw-p-4 tw-rounded-xl tw-shadow-lg tw-z-10">
-                <div class="tw-flex tw-flex-wrap tw-justify-around tw-gap-4">
-                    <div class="reveal-up tw-text-center tw-p-2 tw-animate-fade-in tw-flex-1 tw-min-w-[150px]">
-                        <div class="tw-text-[#0369a1] dark:tw-text-[#38bdf8] tw-text-4xl tw-mb-2">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                        <div style="display: flex; align-items: center; justify-content: center;">
-                            <div class="tw-text-2xl tw-font-bold countup" data-count="15">0</div><span style="font-size: 25px;">+</span>
-                        </div>
-                        <div class="tw-text-sm">Communities Reached</div>
-                    </div>
-                    <div class="reveal-up tw-text-center tw-p-2 tw-animate-fade-in tw-delay-200 tw-flex-1 tw-min-w-[150px]">
-                        <div class="tw-text-[#0369a1] dark:tw-text-[#38bdf8] tw-text-4xl tw-mb-2">
-                            <i class="bi bi-journal-text"></i>
-                        </div>
-                        <div style="display: flex; align-items: center; justify-content: center;">
-                            <div class="tw-text-2xl tw-font-bold countup" data-count="50">0</div><span style="font-size: 25px;">+</span>
-                        </div>
-                        <div class="tw-text-sm">Publications</div>
-                    </div>
-                    <div class="reveal-up tw-text-center tw-p-2 tw-animate-fade-in tw-delay-400 tw-flex-1 tw-min-w-[150px]">
-                        <div class="tw-text-[#0369a1] dark:tw-text-[#38bdf8] tw-text-4xl tw-mb-2">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <div style="display: flex; align-items: center; justify-content: center;">
-                        <div class="tw-text-2xl tw-font-bold countup" data-count="10000">0</div><span style="font-size: 25px;">+</span>
-                        </div>
-                        <div class="tw-text-sm">Lives Impacted</div>
-                    </div>
+        <div class="container hero-inner">
+          <div class="stats-board reveal">
+            <div class="stats-row">
+              <div class="stat">
+                <div class="icon"><i class="bi bi-globe2"></i></div>
+                <div>
+                  <div class="value"><span class="countup" data-count="20">0</span><span>+</span></div>
+                  <div class="label">Communities Reached</div>
                 </div>
+              </div>
+              <div class="stat">
+                <div class="icon"><i class="bi bi-people-fill"></i></div>
+                <div>
+                  <div class="value"><span class="countup" data-count="500">0</span><span>+</span></div>
+                  <div class="label">Active Members</div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                <div>
+                  <div class="value"><span class="countup" data-count="10000">0</span><span>+</span></div>
+                  <div class="label">Lives Impacted</div>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <!-- Content Section -->
-            <div class="reveal-up tw-flex tw-flex-col tw-min-h-[50vh] tw-place-content-center tw-items-center tw-z-10">
-                <h1
-                    class="reveal-up tw-text-center tw-text-5xl tw-font-bold tw-uppercase tw-leading-[1.2] max-lg:tw-text-4xl max-md:tw-text-3xl">
-                    <span
-                        class="tw-bg-gradient-to-r tw-from-[#0369a1] tw-to-[#38bdf8] tw-bg-clip-text tw-text-transparent">
-                        ISPOR-HEOR
-                    </span>
-                    <br />
-                    <span class="tw-text-xl tw-font-light tw-mt-4 tw-block">
-                        The Professional Society for Health Economics and Outcomes Research
-                    </span>
-                </h1>
-
-                <div
-                    class="reveal-up tw-mt-8 tw-max-w-3xl tw-text-lg tw-p-2 tw-text-center tw-text-gray-800 dark:tw-text-gray-200">
-                    Advancing HEOR excellence to transform healthcare decision-making globally through education,
-                    research, and multidisciplinary collaboration.
-                </div>
-
-                <div class="reveal-up tw-mt-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4">
-
-                    <button onclick="openVideo()" class="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors 
-                                        tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white">
-
-                        <div class="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">
-                            <div
-                                class="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2
-                                             tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full">
-                            </div>
-                            <span class="bi bi-play-circle-fill"></span>
-                        </div>
-                        <span>Watch video</span>
-                    </button>
-
-                    <a href="https://www.youtube.com/@AcademyX-m4m" class="btn tw-group tw-flex tw-items-center tw-gap-2 tw-shadow-lg 
-   tw-min-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 
-   tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03] 
-   tw-whitespace-nowrap tw-overflow-visible tw-flex-nowrap">
-                        <span class="tw-whitespace-nowrap">Sponsor</span>
-                        <i class="bi bi-heart-fill"></i>
-                    </a>
-
-                </div>
+          <div class="center">
+            <h1 style="margin: 8px 0 0; font-size: 42px; line-height: 1.2;">
+              <span style="background: linear-gradient(90deg,#27AAE2,#38bdf8); -webkit-background-clip: text; background-clip: text; color: transparent;">ISPOR-HEOR</span>
+              <br />
+              <span style="font-size: 18px; font-weight: 400; color: #111827;">THE PROFESSIONAL SOCIETY FOR HEALTH ECONOMICS AND OUTCOMES RESEARCH</span>
+            </h1>
+            <p class="muted" style="max-width: 780px; margin: 16px auto 0; font-size: 18px;">Advancing HEOR excellence to transform healthcare decision-making globally through education, research, and multidisciplinary collaboration.</p>
+            <div class="mt-20" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+              <button class="btn" onclick="openVideo()"><i class="bi bi-play-circle-fill"></i><span>Watch video</span></button>
+              <a class="btn" href="https://wa.link/m7cgxx" target="_blank" rel="noopener"><span>Sponsor</span><i class="bi bi-heart-fill"></i></a>
             </div>
+          </div>
 
-            <!-- Image Slider -->
-            <div
-                class="reveal-up tw-mt-12 tw-w-full tw-max-w-6xl tw-mx-auto tw-rounded-xl tw-overflow-hidden tw-shadow-2xl tw-z-10">
-                <div class="swiper tw-h-[400px] max-md:tw-h-[300px]">
-                    <div class="swiper-wrapper">
-                        <!-- Add your images here -->
-                        <div class="swiper-slide">
-                            <img src="./assets/images/home/hero_1.jpg" alt="ISPOR Event"
-                                class="tw-w-full tw-h-full tw-object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/home/banner_3.jpg" alt="ISPOR Event"
-                                class="tw-w-full tw-h-full tw-object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/home/banner_2.jpg" alt="Medical Outreach"
-                                class="tw-w-full tw-h-full tw-object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/home/banner_4.jpg" alt="Research Team"
-                                class="tw-w-full tw-h-full tw-object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/home/banner_5.jpg" alt="Medical Outreach"
-                                class="tw-w-full tw-h-full tw-object-cover">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/images/home/banner_6.jpg" alt="Medical Outreach"
-                                class="tw-w-full tw-h-full tw-object-cover">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Scrolling Animation -->
-        <div class="tw-absolute tw-bottom-8 tw-left-1/2 tw--translate-x-1/2 tw-z-10 tw-animate-bounce">
+          <div class="hero-video">
+            <video loading="lazy" autoplay loop muted playsinline poster="./assets/images/home/hero_1.jpg">
+              <source data-src="./assets/videos/hero-video.mp4" type="video/mp4">
+              <source src="./assets/videos/hero-video.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
     </section>
 
-    <section class="mission-section reveal-up" id="mission">
-
-        <div class="mission-banner reveal-up">
-            <img src="./assets/images/home/hero_6.jpg" alt="UNN ISPOR Medical Outreach">
-            <div class="banner-overlay">
-                <div style="display: flex; align-items: center; gap: 16px; margin-top: 16px;">
-                    <img src="./assets/images/brand-logos/unn_logo.png" alt="Logo 1" style="height: 48px; width: 48px; object-fit: contain;">
-                    <span style="font-size: 24px; font-weight: bold;">+</span>
-                    <img src="./assets/logo/logo_icon.png" alt="Logo 2" style="height: 48px; width: 48px; object-fit: contain;">
-                </div>
-                <h2>Transforming Healthcare Through Education & Action</h2>
-                <p>UNN ISPOR-HEOR Branch: Bridging Research with Community Impact</p>
-            </div>
-        </div>
-
-        <div class="section-heading reveal-up">
-            <h2>Our Mission & Local Impact</h2>
-            <p>Advancing healthcare decisions through education and community engagement</p>
-        </div>
-
-        <div class="local-impact reveal-up">
-            <h3>UNN Branch Focus</h3>
-            <p>While maintaining ISPOR's global mission of advancing HEOR excellence, our university branch focuses on:
-            </p>
-            <ul>
-                <li><i class="bi bi-check-circle-fill tw-text-ispor-blue"></i> Student-led medical outreaches in rural
-                    communities</li>
-                <li><i class="bi bi-check-circle-fill tw-text-ispor-blue"></i> Practical research methodology workshops
-                </li>
-                <li><i class="bi bi-check-circle-fill tw-text-ispor-blue"></i> Interdisciplinary healthcare seminars
-                </li>
-                <li><i class="bi bi-check-circle-fill tw-text-ispor-blue"></i> Public health awareness campaigns</li>
+  <section class="section curved alt" id="mission">
+      <div class="container">
+        <h2>Our Mission & Local Impact</h2>
+        <div class="impact-grid">
+          <div>
+            <h3 style="margin:0;">UNN ISPOR Medical Outreach</h3>
+            <p class="helper">Advancing healthcare decisions through education and community engagement</p>
+            <ul class="feature-list">
+              <li class="feature">
+                <div class="icon-tile"><i class="bi bi-hospital"></i></div>
+                <div class="text">Student-led medical outreaches in rural communities</div>
+              </li>
+              <li class="feature">
+                <div class="icon-tile"><i class="bi bi-mortarboard"></i></div>
+                <div class="text">Practical research methodology workshops</div>
+              </li>
+              <li class="feature">
+                <div class="icon-tile"><i class="bi bi-people"></i></div>
+                <div class="text">Interdisciplinary healthcare seminars</div>
+              </li>
+              <li class="feature">
+                <div class="icon-tile"><i class="bi bi-heart-pulse"></i></div>
+                <div class="text">Public health awareness campaigns</div>
+              </li>
             </ul>
+          </div>
+          <div>
+            <img src="./assets/images/home/hero_6.jpg" alt="UNN ISPOR Medical Outreach" style="border-radius:12px;">
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="values-grid reveal-up">
-            <div class="value-card reveal-up">
-                <div class="value-icon">🏥</div>
-                <h3>Community Healthcare</h3>
-                <p>Direct medical outreach programs serving 15+ local communities annually</p>
+    <section class="section" id="leadership-highlight">
+      <div class="container">
+        <h2>Leadership 2024/2025</h2>
+        <div class="card glass maxw-900 reveal">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <div class="media">
+              <div class="avatar-stack" style="display:flex; flex-wrap:wrap; gap:8px;">
+                <img class="avatar" src="./assets/images/people/favour-chinemeogo-augustine.jpg" alt="Favour Chinemeogo Augustine" title="Secretary General" loading="lazy">
+                <img class="avatar" src="./assets/images/people/sunday-james-ebenezer.jpg" alt="Sunday James Ebenezer" title="Research Chairperson" loading="lazy">
+                <img class="avatar" src="./assets/images/people/eze-pascal-chisom.jpg" alt="Eze Pascal Chisom" title="Media & Publicity Chair I" loading="lazy">
+                <img class="avatar" src="./assets/images/people/ali-sarah-ifeoma.jpg" alt="Ali Sarah Ifeoma" title="IPHAC Chairperson I" loading="lazy">
+                <img class="avatar" src="./assets/images/people/ogunjobi-bamidele-victor.jpg" alt="Ogunjobi Bamidele Victor" title="Editor-in-Chief II" loading="lazy">
+              </div>
+              <div>
+                <h3 style="margin:4px 0;">Meet the Leadership Council</h3>
+                <div class="muted">Executive and committee leads for the 2024/2025 session</div>
+              </div>
             </div>
-
-            <div class="value-card reveal-up">
-                <div class="value-icon">🎓</div>
-                <h3>Student Education</h3>
-                <p>Practical training in health economics and outcomes research methods</p>
+            <div style="display:flex; gap:12px;">
+              <a class="btn" href="about.html#leadership">View Leaders</a>
+              <a class="btn" href="team.html">Meet Full Team</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="value-card reveal-up">
-                <div class="value-icon">🤝</div>
-                <h3>Local Partnerships</h3>
-                <p>Collaborating with 8 regional healthcare providers</p>
+  <section class="section curved alt" id="outreach">
+      <div class="container">
+        <h2>Outreach Impact</h2>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="thumb"><img src="./assets/images/home/hero_5.jpg" alt="ISPOR 1000 4.0 - Project Dent O'Clock"></div>
+            <div class="meta">Project Dent O'Clock • June 2025</div>
+            <div class="mt-20" style="margin-top:8px;"><a class="link" href="https://drive.google.com/drive/folders/1ogdeiPliHoFfNBP-U0Cqh8xKB2v_kHWd" target="_blank" rel="noopener">View Photos</a></div>
+          </div>
+          <div class="card reveal">
+            <div class="thumb"><img src="./assets/images/home/hero_6.jpg" alt="Mental Health Day Outreach"></div>
+            <div class="meta">Mental Health Day Outreach • Oct 11, 2025</div>
+            <div class="mt-20" style="margin-top:8px;"><a class="link" href="https://drive.google.com/drive/folders/11_27EVGZjR4gxd5z4n7ftTKHSbPPq2_7" target="_blank" rel="noopener">View Photos</a></div>
+          </div>
+          <div class="card reveal">
+            <div class="thumb"><img src="./assets/images/home/hero_4.jpg" alt="Reproductive Health Outreach"></div>
+            <div class="meta">Reproductive Health Outreach • Aug 29, 2024</div>
+            <div class="mt-20" style="margin-top:8px;"><a class="link" href="https://drive.google.com/drive/folders/1DuViGepRKYCQkhJL0t5i2nBT6gGuzUMi" target="_blank" rel="noopener">View Photos</a></div>
+          </div>
+        </div>
+        <div class="center mt-20"><a class="btn" href="outreaches.html">Explore Outreaches</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <h2>Our Leadership Team</h2>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="media">
+              <img class="avatar" src="./assets/images/people/favour-chinemeogo-augustine.jpg" alt="Favour Chinemeogo Augustine">
+              <div><h3 style="margin:4px 0;">Favour Chinemeogo Augustine</h3><div class="muted">Secretary General</div></div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="media">
+              <img class="avatar" src="./assets/images/people/sunday-james-ebenezer.jpg" alt="Sunday James Ebenezer">
+              <div><h3 style="margin:4px 0;">Sunday James Ebenezer</h3><div class="muted">Research Chairperson</div></div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <div class="media">
+              <img class="avatar" src="./assets/images/people/eze-pascal-chisom.jpg" alt="Eze Pascal Chisom">
+              <div><h3 style="margin:4px 0;">Eze Pascal Chisom</h3><div class="muted">Media & Publicity Chair I</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="center mt-20"><a class="btn" href="team.html">Meet Full Team</a></div>
+      </div>
+    </section>
+    
+    <section class="section" id="donate">
+      <div class="container">
+        <h2>Support Our Mission</h2>
+        <div class="card">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+              <div class="muted">Help us transform healthcare through education and research</div>
+              <a class="btn donate-link" href="#">Donate Now</a>
+          </div>
+          <div style="margin-top:12px;">
+            <div style="display:flex; justify-content:space-between; font-weight:600; font-size:14px;"><span>Campaign Progress</span><span class="muted">₦5M of ₦10M</span></div>
+            <div class="progress" style="height:10px; background:#e5e7eb; border-radius:999px; overflow:hidden; margin-top:8px;">
+              <div class="progress-bar" style="height:100%; width:50%; background:linear-gradient(90deg,#27AAE2,#0891b2);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Donate QR Modal (global) -->
+      <div id="donate-modal-bg" class="donate-modal-bg" aria-hidden="true">
+        <div class="donate-modal" role="dialog" aria-modal="true" aria-labelledby="donate-modal-title">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 id="donate-modal-title" style="margin:0;">Donate via WhatsApp</h3>
+            <button class="donate-close close" aria-label="Close">&times;</button>
+          </div>
+          <p class="muted" style="margin:0;">Scan the QR code with WhatsApp or tap Open WhatsApp to continue.</p>
+          <img class="qr" src="./assets/images/home/wa.link_m7cgxx.png" alt="Donate - WhatsApp QR" loading="lazy">
+          <div class="actions">
+            <a class="btn" href="https://wa.link/m7cgxx" target="_blank" rel="noopener">Open WhatsApp</a>
+            <button class="btn donate-close" type="button">Close</button>
+          </div>
+        </div>
+      </div>
+
+    <section class="container" style="padding: 40px 24px;">
+        <h3 style="font-size: 32px; text-align:center; margin:0 0 12px;">FAQs</h3>
+        <div class="faqs">
+            <div class="faq">
+                <h4 class="faq-accordion"><span>What is ISPOR-HEOR?</span><i class="bi bi-plus"></i></h4>
+                <div class="content">ISPOR-HEOR, formerly The International Society for Pharmacoeconomics and Outcomes Research, is a global health organization dedicated to improving healthcare decision making through health economics and outcomes research.</div>
+            </div>
+            <div class="faq">
+                <h4 class="faq-accordion"><span>What is the mission of ISPOR-HEOR?</span><i class="bi bi-plus"></i></h4>
+                <div class="content">ISPOR's mission is to advance health economics and outcomes research excellence to improve decision making for health globally. We believe that every healthcare decision should be informed by the best scientific research.</div>
+            </div>
+            <div class="faq">
+                <h4 class="faq-accordion"><span>What activities does the University of Nigeria Nsukka's branch of ISPOR-HEOR engage in?</span><i class="bi bi-plus"></i></h4>
+                <div class="content">The University of Nigeria Nsukka's branch engages in activities such as seminars, field trips, public health campaigns, medical outreaches, and intensive hands-on training on research to improve healthcare decisions.</div>
+            </div>
+            <div class="faq">
+                <h4 class="faq-accordion"><span>How does ISPOR-HEOR contribute to the field of health economics and outcomes research?</span><i class="bi bi-plus"></i></h4>
+                <div class="content">ISPOR-HEOR is the leading source for scientific conferences, peer-reviewed and MEDLINE®️-indexed publications, good practices guidance, education, collaboration, and tools/resources in the HEOR field.</div>
+            </div>
+            <div class="faq">
+                <h4 class="faq-accordion"><span>How can I stay updated with ISPOR-HEOR's activities and events?</span><i class="bi bi-plus"></i></h4>
+                <div class="content">Follow us on our official website, social media channels, or subscribe to our newsletter to stay updated with our activities and events.</div>
             </div>
         </div>
     </section>
 
-    <section class="president-section" id="president-msg">
-        <div class="container">
-            <!-- Section Title -->
-            <h2 class="section-title">Our Leadership</h2>
-            
-            <div class="president-grid">
-                <!-- Left Column -->
-                <div class="left-column">
-                    <div class="portrait-frame">
-                        <img src="./assets/images/people/president_ispor.jpg" alt="President Emmanuella Chiamaka Egwuonwu" 
-                             class="president-photo">
-                        <div class="leadership-badge">
-                            <span class="badge-icon">⭐</span>
-                            <span>Student Leadership</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Right Column -->
-                <div class="right-column">
-                    <!-- Bio Section -->
-                    <div class="bio-section president-glass-card">
-                        <h3>Emmanuella Chiamaka Egwuonwu</h3>
-                        <p class="position">500 Level Pharmacy Student</p>
-                        <p class="bio-text">
-                            As current ISPOR-UNN Chapter President, Emmanuella has led 10+ campus health initiatives
-                            while mentoring 150+ students in practical outcomes research methodologies...
-                        </p>
-                        <a href="#" class="bio-link">Read Full Bio →</a>
-                    </div>
-    
-                    <!-- Quote Box -->
-                    <div class="quote-box president-glass-card">
-                        <blockquote>
-                            "Our students aren't just researchers - they're future health leaders shaping Nigeria's
-                            healthcare landscape."
-                        </blockquote>
-                    </div>
-                </div>
-    
-                <!-- Video Container -->
-                <div class="video-container president-glass-card">
-                    <div class="video-thumbnail" onclick="openVideo()">
-                        <img src="./assets/images/home/hero_5.jpg" alt="Watch President's Message">
-                        <div class="play-button">
-                            <i class="bi bi-play-circle-fill tw-text-4xl tw-text-white"></i>
-                        </div>
-                    </div>
-                </div>
+    <section class="container" style="padding: 24px 0 60px;">
+        <div class="newsletter">
+            <div>
+        <h2 style="margin:0; font-size: 24px;">Join our newsletter</h2>
+        <div class="muted">Get chapter news and updates.</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px;">
+                <input type="email" class="input" placeholder="email" />
+                <a class="btn" href="">Signup</a>
             </div>
         </div>
     </section>
-
-    <section class="outreach-gallery" id="outreach">
-        <div class="container">
-            <h2 class="section-title">Outreach Impact</h2>
-            
-            <!-- Filter Controls -->
-            <div class="gallery-filters">
-                <button class="filter-btn medical" data-filter="medical">Ispor 1000</button>
-                <button class="filter-btn school" data-filter="school">Ispor Live Health Walk</button>
-                <button class="filter-btn rural" data-filter="rural">Rural Workshops</button>
-            </div>
-    
-            <!-- Image Grid -->
-            <div class="gallery-grid">
-                <!-- Medical Camp Items (6 items) -->
-                <div class="gallery-item medical" data-category="medical">
-                    <img src="./assets/images/home/hero_5.jpg" alt="Medical Outreach">
-                    <div class="image-overlay">
-                        <span class="location">Nsukka Community</span>
-                        <span class="date">March 2023</span>
-                    </div>
-                </div>
-    
-                <!-- School Program Items (6 items) -->
-                <div class="gallery-item school" data-category="school">
-                    <img src="./assets/images/home/hero_6.jpg" alt="School Health Program">
-                    <div class="image-overlay">
-                        <span class="location">Union Secondary School</span>
-                        <span class="date">June 2023</span>
-                    </div>
-                </div>
-    
-                <!-- Rural Workshop Items (6 items) -->
-                <div class="gallery-item rural" data-category="rural">
-                    <img src="./assets/images/home/hero_4.jpg" alt="Rural Workshop">
-                    <div class="image-overlay">
-                        <span class="location">Opi Community</span>
-                        <span class="date">September 2023</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="view-all">
-                <a href="https://www.instagram.com/ispor_heor_unn/?igsh=eG1tOTRvbHBjeDhn&utm_source=qr#" target="_blank" class="view-all-btn">
-                    <span>View Gallery</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-    
-            <!-- Video Reel -->
-            <div class="video-reel">
-                <h3 class="reel-title" style="margin-top: -5px;">Outreach Highlights</h3>
-                <div class="video-container">
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/ZlQamnS8ck8" 
-                                frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/CxOo3oxgZ_M?si=4fzGFvmJkrTGruIw" 
-                                frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/OOZyu6q5a2M?si=bKNV8NK-1IWaITZN" 
-                                frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="brand">
+          <img src="./assets/logo/logo.png" alt="ISPOR-UNN Logo" style="max-width:120px;" />
+          <div style="display:flex; gap:12px; font-size:18px;">
+            <a href="https://www.instagram.com/ispor_heor_unn" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ispor-heor-unn/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/ispor_heor_unn" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://youtube.com/@isporunnstudentchapter8756" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.tiktok.com/@isporheorunn" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
         </div>
-    </section>
-
-    <section class="team-showcase" id="team">
-        <div class="container">
-            <h2 class="section-title">Our Leadership Team</h2>
-    
-            <!-- Leadership Grid -->
-            <div class="leadership-grid">
-                <!-- President -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="./assets/images/people/president_ispor.jpg" alt="President">
-                        <div class="glow-border"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Emmanuella Egwuonwu</h3>
-                        <p class="role">President</p>
-                        <div class="hover-bio">
-                            <p>500L Pharmacy Student • 15+ Health Initiatives • Research Mentor</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- President-Elect -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="./assets/images/people/Ezeani Dominic.jpg" alt="President-Elect">
-                        <div class="glow-border"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Ezeani Dominic</h3>
-                        <p class="role">President-Elect</p>
-                        <div class="hover-bio">
-                            <p>Public Health Specialist • Rural Outreach Coordinator</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Additional Team Members (8 more) -->
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="./assets/images/people/Oledibe Ann Ifeoma.jpg" alt="Secretary-General">
-                        <div class="glow-border"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Oledibe Ann</h3>
-                        <p class="role">Secretary-General</p>
-                        <div class="hover-bio">
-                            <p>HEOR Methodology Expert • 5 Published Papers</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="./assets/images/people/Augustine Favour Chinemeogo.jpg" alt="Asst. Secretary-General">
-                        <div class="glow-border"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Augustine Favour</h3>
-                        <p class="role">Asst. Secretary-General</p>
-                        <div class="hover-bio">
-                            <p>HEOR Methodology Expert • 5 Published Papers</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="./assets/images/people/Ikeji Chinwendu.jpg" alt="Field Marshall I">
-                        <div class="glow-border"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Ikeji Chinwendu</h3>
-                        <p class="role">Field Marshall I</p>
-                        <div class="hover-bio">
-                            <p>HEOR Methodology Expert • 5 Published Papers</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="./assets/images/people/kanu thankGod Nzubechi.jpg" alt="Field Marshall II">
-                        <div class="glow-border"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Kanu ThankGod</h3>
-                        <p class="role">Field Marshall II</p>
-                        <div class="hover-bio">
-                            <p>HEOR Methodology Expert • 5 Published Papers</p>
-                        </div>
-                    </div>
-                </div>
-            
-            </div>
-    
-            <!-- View All Button -->
-            <div class="view-all">
-                <a href="team.html" class="view-all-btn">
-                    <span>Meet Full Team</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-    
-            <!-- Join CTA -->
-            <div class="join-cta">
-                <div class="cta-content">
-                    <h3>Shape the Future of Healthcare</h3>
-                    <p class="cta-sub">Join 200+ Members Making Impact</p>
-                    
-                    <form class="membership-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <button type="submit" class="cta-btn">
-                            <span>Join Now</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
+        <div>
+          <h3>Activities</h3>
+          <div style="display:grid; gap:8px;">
+            <a href="activities.html#conference">Conferences</a>
+            <a href="activities.html#workshops">Workshops</a>
+            <a href="activities.html#capacity">Capacity Building</a>
+            <a href="activities.html#student-dev">Student Development</a>
+          </div>
         </div>
-    </section>
-    
-    <section class="donation-section" id="donate">
-        <div class="donation-container">
-            <div class="section-heading reveal-up">
-                <h2>Support Our Mission</h2>
-                <p>Help us transform healthcare through education and research</p>
-            </div>
-
-            <div class="progress-section reveal-up">
-                <div class="progress-header">
-                    <h3>Campaign Progress</h3>
-                    <span class="goal-text">₦5M raised of ₦10M goal</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
-            </div>
-
-            <div class="donation-options reveal-up">
-                <button class="donation-button" data-amount="5000">₦5,000</button>
-                <button class="donation-button" data-amount="10000">₦10,000</button>
-                <button class="donation-button" data-amount="25000">₦25,000</button>
-                <button class="donation-button" data-amount="custom">Custom Amount</button>
-            </div>
-
-            <div class="custom-amount reveal-up">
-                <input type="number" placeholder="Enter custom amount (₦)" min="100" step="100">
-            </div>
-
-            <div class="testimonial reveal-up">
-                <p>"My donation funded 3 student researchers - Dr. Adebayo"</p>
-            </div>
-
-            <button class="submit-donation reveal-up">Complete Donation</button>
-
-            <div class="trust-badges reveal-up">
-                <div class="trust-badge">
-                    <i class="bi bi-shield-lock-fill"></i>
-                    <span>Secure Payment</span>
-                </div>
-                <div class="trust-badge">
-                    <i class="bi bi-patch-check-fill"></i>
-                    <span>SSL Encrypted</span>
-                </div>
-            </div>
+        <div>
+          <h3>About</h3>
+          <div style="display:grid; gap:8px;">
+            <a href="about.html#mission">Our Mission</a>
+            <a href="about.html#leadership">Leadership</a>
+            <a href="about.html#awards">Awards</a>
+          </div>
         </div>
-    </section>
-
-    <section
-        class="tw-relative tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]">
-        <h3 class="tw-text-4xl tw-font-medium max-md:tw-text-2xl">
-            FAQs
-        </h3>
-        <div class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4">
-            <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>What is ISPOR-HEOR?</span>
-                    <i
-                        class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
-                </h4>
-                <div class="content max-lg:tw-text-sm">
-                    ISPOR-HEOR, formerly The International Society for Pharmacoeconomics and Outcomes Research, is a global health organization dedicated to improving healthcare decision making through health economics and outcomes research.
-                </div>
-            </div>
-            <hr>
-            <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>What is the mission of ISPOR-HEOR?</span>
-                    <i
-                        class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
-                </h4>
-                <div class="content max-lg:tw-text-sm">
-                    ISPOR's mission is to advance health economics and outcomes research excellence to improve decision making for health globally. We believe that every healthcare decision should be informed by the best scientific research.
-                </div>
-            </div>
-            <hr>
-            <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>What activities does the University of Nigeria Nsukka's branch of ISPOR-HEOR engage in?</span>
-                    <i
-                        class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
-                </h4>
-                <div class="content max-lg:tw-text-sm">
-                    The University of Nigeria Nsukka's branch engages in activities such as seminars, field trips, public health campaigns, medical outreaches, and intensive hands-on training on research to improve healthcare decisions.
-                </div>
-            </div>
-            <hr>
-            <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>How does ISPOR-HEOR contribute to the field of health economics and outcomes research?</span>
-                    <i
-                        class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
-                </h4>
-                <div class="content max-lg:tw-text-sm">
-                    ISPOR-HEOR is the leading source for scientific conferences, peer-reviewed and MEDLINE®️-indexed publications, good practices guidance, education, collaboration, and tools/resources in the HEOR field.
-                </div>
-            </div>
-            <hr>
-            <div class="faq tw-w-full">
-                <h4 class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg">
-                    <span>How can I stay updated with ISPOR-HEOR's activities and events?</span>
-                    <i
-                        class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform tw-ml-auto tw-font-semibold"></i>
-                </h4>
-                <div class="content max-lg:tw-text-sm">
-                    Follow us on our official website, social media channels, or subscribe to our newsletter to stay updated with our activities and events.
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div
-            class="purple-bg-grad max-md:tw-hidden reveal-up tw-absolute tw-bottom-14 tw-right-[20%] tw-h-[150px] tw-w-[150px] tw-rounded-full">
-        </div>
-    </section>
-
-    <section
-        class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%] max-md:tw-px-2">
-        <div
-            class="tw-flex tw-w-full tw-max-w-[80%] tw-place-content-center tw-place-items-center tw-justify-between tw-gap-3 
-                        tw-rounded-lg tw-bg-[#F6F7FB] dark:tw-bg-[#171717] tw-p-6 max-md:tw-max-w-full max-md:tw-flex-col">
-            <div class="tw-flex tw-flex-col max-lg:tw-text-center tw-gap-1">
-                <h2 class="tw-text-2xl tw-text-gray-800 dark:tw-text-gray-200 max-md:tw-text-xl">
-                    Join our newsletter
-                </h2>
-                <div class="tw-text-gray-700 dark:tw-text-gray-300">Get product insights and updates.</div>
-            </div>
-
-            <div class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2">
-                <input type="email" class="input tw-h-full tw-w-full !tw-border-gray-600 tw-p-2 tw-outline-none"
-                    placeholder="email" />
-                <a class="btn !tw-rounded-full !tw-border-[1px] !tw-text-black !tw-border-solid !tw-border-black  dark:!tw-text-white
-                            dark:!tw-border-gray-300 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
-                    href="">
-                    Signup
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] 
-            tw-text-black dark:tw-text-white max-md:tw-flex-col">
-    <div class="tw-flex max-md:tw-flex-col max-md:tw-gap-6 tw-gap-3 tw-w-full tw-place-content-around">
-        <!-- Logo and Social Section -->
-        <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
-            <a href="#" class="tw-w-full tw-place-items-center tw-flex tw-flex-col tw-gap-6">
-                <img src="./assets/logo/logo.png" alt="ISPOR-UNN Logo" class="tw-max-w-[120px]" />
-            </a>
-            <div class="tw-flex tw-gap-4 tw-text-lg">
-                <a href="https://www.instagram.com/ispor_heor_unn" target="_blank" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/ispor-heor-unn/" target="_blank" aria-label="LinkedIn">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="https://x.com/ispor_heor_unn" target="_blank" aria-label="Twitter">
-                    <i class="bi bi-twitter-x"></i>
-                </a>
-                <a href="https://youtube.com/@isporunnstudentchapter8756" target="_blank" aria-label="YouTube">
-                    <i class="bi bi-youtube"></i>
-                </a>
-                <a href="https://www.tiktok.com/@isporheorunn" target="_blank" aria-label="TikTok">
-                    <i class="bi bi-tiktok"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- Links Section -->
-        <div class="tw-flex max-md:tw-flex-col tw-flex-wrap tw-gap-6 tw-h-full tw-w-full tw-justify-around">
-            <!-- Activities -->
-            <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                <h2 class="tw-text-xl">Activities</h2>
-                <div class="tw-flex tw-flex-col tw-gap-3">
-                    <a href="#outreach" class="footer-link">Medical Camps</a>
-                    <a href="#outreach"" class="footer-link">Workshops</a>
-                    <a href="#outreach"" class="footer-link">Seminars</a>
-                    <a href="#outreach"" class="footer-link">Research</a>
-                </div>
-            </div>
-
-            <!-- About -->
-            <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                <h2 class="tw-text-xl">About</h2>
-                <div class="tw-flex tw-flex-col tw-gap-3">
-                    <a href="#mission" class="footer-link">Our Mission</a>
-                    <a href="#team" class="footer-link">Leadership</a>
-                    <a href="#president-msg" class="footer-link">President's Message</a>
-                </div>
-            </div>
-
-            <!-- Get Involved -->
-            <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
-                <h2 class="tw-text-xl">Get Involved</h2>
-                <div class="tw-flex tw-flex-col tw-gap-3">
-                    <a href="#donate" class="footer-link">Support Us</a>
-                    <a href="#team" class="footer-link">Join ISPOR</a>
-                    <a href="team.html" class="footer-link">Contact</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="tw-mt-8">
-    <div class="tw-mt-2 tw-flex tw-gap-2 tw-flex-col tw-text-gray-700 dark:tw-text-gray-300 tw-place-items-center 
-            tw-text-[12px] tw-w-full tw-text-center tw-place-content-around">
-        <span>Copyright © 2024 ISPOR-HEOR UNN Student Chapter</span>
-        <span>The Professional Society for Health Economics and Outcomes Research</span>
-    </div>
-</footer>
+      </div>
+      <div class="footer-bottom">
+        <div>Copyright © 2025 ISPOR-HEOR UNN Student Chapter</div>
+        <div>The Professional Society for Health Economics and Outcomes Research</div>
+      </div>
+    </footer>
 
 
 </body>
@@ -873,7 +385,52 @@
 
 <script src="./scripts/components.js"></script>
 <script src="./index.js"></script>
-<script src="./scripts/carouseal.js"></script>
-<script src="./scripts/donation.js"></script>
+
+<!-- JSON-LD Organization Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ISPOR-HEOR UNN",
+  "alternateName": "ISPORUNN",
+  "url": "",
+  "sameAs": [
+    "https://www.instagram.com/ispor_heor_unn",
+    "https://www.linkedin.com/company/ispor-heor-unn/",
+    "https://x.com/ispor_heor_unn",
+    "https://youtube.com/@isporunnstudentchapter8756",
+    "https://www.tiktok.com/@isporheorunn"
+  ]
+}
+</script>
+
+<!-- Lazy Load Video Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const heroVideo = document.querySelector('.reveal-up video[loading="lazy"]');
+        
+        if (heroVideo) {
+            // Intersection Observer for lazy loading
+            const videoObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = entry.target;
+                        const sources = video.querySelectorAll('source[data-src]');
+                        
+                        sources.forEach(source => {
+                            source.src = source.dataset.src;
+                        });
+                        
+                        video.load();
+                        video.play().catch(err => console.log('Video autoplay prevented:', err));
+                        observer.unobserve(video);
+                    }
+                });
+            }, { threshold: 0.25 });
+            
+            videoObserver.observe(heroVideo);
+        }
+    });
+</script>
 
 </html>

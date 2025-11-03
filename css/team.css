@@ -58,6 +58,15 @@
     color: white;
 }
 
+/* Ensure glass cards on Team use the global glass style (overrides local background) */
+.team-member.card.glass {
+    background: rgba(255,255,255,0.56);
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    box-shadow: 0 16px 36px rgba(39,170,226,0.12), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
 /* View All Button */
 .view-all {
     text-align: center;
