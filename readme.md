@@ -1,72 +1,118 @@
-## Welcome to AcadX
+## ISPOR-HEOR UNN Student Chapter Website
 
-Bridging the gap between knowledge and understanding.
+The official website for the ISPOR-HEOR UNN Student Chapter (ISPORUNN). This site showcases our society, mission and values, leadership, outreaches, activities, and publications, and provides ways to support or join our work.
 
-Are you ready to take your academic journey to the next level? AcadX is your trusted partner in mastering challenging courses through expertly crafted video tutorials and resources designed to simplify learning and maximize results.
+### About ISPOR-HEOR UNN
 
----
+ISPOR is a global organization focused on Health Economics and Outcomes Research (HEOR). The UNN Student Chapter advances pharmacoeconomics and evidence-based healthcare decision-making through student-led research, education, and community impact.
 
-### Why Choose AcadX?
+### Mission · Vision · Values
 
-- **Tailored Video Tutorials**: Simplified explanations of complex topics, starting with PCH 331: Pharmaceutical Organic Chemistry
-- **Expert Tutors**: Learn from top-notch instructors passionate about your academic success
-- **Convenience & Flexibility**: Study at your own pace, anytime, anywhere
-- **Affordable Subscription**: Get premium learning content at a price that fits your budget
+- Mission: Advance HEOR excellence to improve decision-making for health globally.
+- Vision: A world where healthcare is accessible, effective, efficient, and affordable for all.
+- Values: Transformative · Scientific · Inclusive · Collaborative · Transparent · Ethical
 
-### What We Offer
+### Our Members
 
-- **High-Quality Videos**: Comprehensive tutorials breaking down every concept step by step
-- **Interactive Learning**: Quizzes and practice questions to enhance understanding
-- **Secure Access**: Stream videos seamlessly with restricted downloads to protect content integrity
-- **Exclusive Community**: Connect with peers and tutors for collaborative learning
+We are a vibrant community of 500+ active members across pharmacy, medicine, public health, and related disciplines—united by a commitment to improve healthcare decisions through evidence, data, and human-centered insights.
 
----
+### Committees
 
-### First Course Launch: PCH 331
+- Intellectual: Meetings, debates, quizzes, Medix Spelling Bee, seminars, Clinical Trivia.
+- Media & Publicity: Broadcasting and social media across Email, SMS, YouTube, LinkedIn, X, Instagram, Telegram, WhatsApp.
+- Outreach & Logistics: Community medical outreaches, awareness campaigns, industrial trips.
+- Editorial: Faceporite Awards, ISPOR News & Gists, D'ZINE, Health Digest, yearbook, website, competitions.
+- Welfare: Member care at meetings, trips, and outreaches; birthdays.
+- Research: Research team; target of ≥2 HEOR publications per session.
+- IPHAC: Public health campaigns, World Health Days, seminars, podcasts, interviews; “Health Quake” talk show.
 
-Master Pharmaceutical Organic Chemistry with ease!
+### Our Impact
 
-**Topics include:**
-- Synthetic organic compounds
-- Introduction to heterocyclic compounds
-- Stereochemistry Chemistry
-- And much more!
+Over 20 communities and 10,000+ lives reached through education, preventive care, research initiatives, and health awareness campaigns.
 
-*Designed for 300 level Pharmacy students looking to ace their exams and beyond.*
+### Leadership (2024/2025)
 
-**🎉 Launch Offer**: Free access for a limited time!
+Key leaders include:
+- Secretary General: Favour Chinemeogo Augustine
+- Assistant Secretary General: Idogwu Ogechukwu Luciana
+- Field Marshal I: Genevieve Akajiobi Somtochukwu
+- Media & Publicity: Eze Pascal Chisom (Chair I), Okwudili Favour Chinagorom (Chair II), Kama Favour Ijeoma (Asst.)
+- Research: Sunday James Ebenezer (Chair 1), Okafor Pleasant Ucheomachukwu (Chair 2), Okoli Jennifer (Assistant)
+- IPHAC: Ali Sarah Ifeoma (Chair 1), Nwinyinya Ifeoma Precious (Asst.)
+- Editorial: Ferdinand Joy Chidimma (EIC I), Ogunjobi Bamidele Victor (EIC II), Ojukwu Chisom Yvonne (Asst.)
+- Finance & Welfare: Okwor Victor Oluchukwu (Financial Secretary), Anaelechi Shalom Ebubechi (Welfare Chair), Chukwuma Adaobi Maryann (Asst.)
+- Others: Obeleagu Chukwuka Brandon (Provost I), class ambassadors (5th, 4th, 3rd year), Non-Pharmacy Ambassador II (Odigbo Ezinne Anthonete)
 
----
+See `about.html#leadership` and `team.html` for the full roster and photos.
 
-### How It Works
+### Awards
 
-1. **Sign Up**: Create your account in minutes
-2. **Subscribe**: Unlock access to premium content with our affordable plans
-3. **Learn**: Watch, practice, and excel in your studies
+- The Gabriel Ezenri Annual Prize for Excellence in Research
+- The Emmanuel Okala Annual Prize for Most Active Isporite
 
----
+2024/2025 Winners include: Egwuonwu Emmanuella Chiamaka (6th Year), Ohia Favour Amarachi (5th Year), Onah Prisca Chibundu (4th Year), Nnadozie Amarachi Jessica (3rd Year), and Agada Isaac (Non-Pharmacy Isporite).
 
-### Join the Revolution in Learning
+### Outreaches
 
-At AcadX, we're not just about passing exams – we're about building a foundation for your future.
+- ISPOR 1000 4.0 – Project Dent O'Clock (June 2025): Oral hygiene education in Nsukka (with Colgate Nigeria), plus a study on knowledge and practices among in-school adolescents.
+- Reproductive Health Outreach (Aug 29, 2024)
+- Community Outreach – IBAGWA-ANI (with DEEJAY foundation)
+- Vital Signs Outreach at UNN
+- Mental Health Day Outreach (Oct 11, 2025)
+- Vital Signs Outreach – Assemblies of God Church (Ekpo Ref, UNN)
 
-📌 **Ready to get started?**  
-Click below to explore our platform and experience the future of learning.
+See `outreaches.html` for details and Drive folders.
 
-[Start Learning Now](https://www.youtube.com/@AcademyX-m4m)
+### Activities & Events
 
----
+- Conferences, workshops/webinars, capacity building, and student development programs.
+- Health Week (Oct 26 – Nov 1, 2025)
+- Health Conference (Nov 1, 2025)
 
-### Stay Connected
+See `activities.html` for sections and updates.
 
-Follow us for updates, new courses, and exclusive offers.
+### Publications
 
-**Contact:**
-- 📧 Email: academyxoffice@gmail.com
-- 📱 Phone: 08082010262
+- DZINE 2025 (magazine)
+- ISPOR News & Gists (newsletters: April, May, September 2025)
+- Health Digest: “Soft Drinks: Our Friendly Enemy”
 
-**Social Media:**
-- [YouTube](https://youtube.com/@academyx-m4m?si=aLgwrS6_580zP4nI)
-- [TikTok](https://tiktok.com/@academyx.co)
+Open Google Drive links from `publications.html`.
 
-*Let's revolutionize education, one tutorial at a time.*
+### Donate · Sponsor · Join
+
+- WhatsApp: https://wa.link/m7cgxx (donate, sponsor, or join)
+- QR modal available on all pages (Donate)
+
+### Social Media
+
+- Instagram: @ispor_heor_unn
+- LinkedIn: ISPOR-HEOR UNN
+- X (Twitter): @ispor_heor_unn
+- YouTube: ISPOR UNN Student Chapter
+- TikTok: @isporheorunn
+
+### SEO & Site Map
+
+- robots.txt at site root
+- Sitemaps at `/sitemap.xml` and `/sitemap`
+- Open Graph tags and JSON-LD Organization on `index.html`
+
+If you have a production domain, update `<loc>` entries in both sitemaps to absolute URLs.
+
+### Tech & Structure
+
+- Static site: HTML, raw CSS (no Tailwind), and vanilla JS
+- Optional libraries are guarded: particles.js, GSAP/ScrollTrigger, CountUp.js
+- Key files: `index.html`, `about.html`, `outreaches.html`, `activities.html`, `publications.html`, `team.html`, `contact.html`, `index.js`, `css/site.css`, `css/home.css`, `sitemap`, `sitemap.xml`, `robots.txt`
+
+### Maintenance
+
+- Update content in respective HTML pages.
+- Add new pages to both `sitemap.xml` and `sitemap`.
+- Keep Donate/Join WhatsApp link in sync across pages and `index.js`.
+- Optimize images and add meaningful ALT text for accessibility and SEO.
+
+### License
+
+© 2025 ISPOR-HEOR UNN Student Chapter. All rights reserved.
