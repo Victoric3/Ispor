@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | ISPOR-HEOR UNN</title>
-  <meta name="description" content="Contact ISPOR-HEOR UNN. Send us a message or inquiry." />
+  <title>Shop | ISPOR-HEOR UNN</title>
+  <meta name="description" content="Shop ISPOR-HEOR UNN merchandise - Polos, bucket hats, face caps, and tote bags." />
   <link rel="shortcut icon" href="./assets/logo/logo_icon.png" type="image/x-icon" />
   <link rel="stylesheet" href="css/site.css" />
-  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/shop.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -44,14 +45,12 @@
             <a href="outreaches.html"><i class="bi bi-hospital" style="color:var(--brand-blue)"></i> Outreaches</a>
           </div>
         </details>
-        <details>
-          <summary><span>Publications</span><i class="bi bi-chevron-down"></i></summary>
+        <details open>
+          <summary style="color:var(--brand-blue)"><span>Shop</span><i class="bi bi-chevron-down"></i></summary>
           <div class="dropdown" role="menu">
-            <a href="publications.html#journals"><i class="bi bi-journal-text" style="color:var(--brand-blue)"></i> Journals</a>
-            <a href="publications.html#news"><i class="bi bi-newspaper" style="color:var(--brand-blue)"></i> News</a>
+            <a href="#merchandise"><i class="bi bi-bag" style="color:var(--brand-blue)"></i> Merchandise</a>
           </div>
         </details>
-        <a href="shop.html" class="nav-link"><i class="bi bi-bag"></i> Shop</a>
       </nav>
   <div><a class="btn donate-link" href="https://wa.link/srbjfv" target="_blank" rel="noopener"><span>Donate</span><i class="bi bi-heart-fill"></i></a></div>
     </div>
@@ -61,36 +60,84 @@
   <div class="spacer-80"></div>
 
   <main class="container">
-    <section class="section curved alt reveal">
-      <h1>Contact Us</h1>
-      <p class="eyebrow">We'd love to hear from you. Send us a message and we'll get back to you shortly.</p>
+    <section class="section reveal">
+      <h1>ISPOR-HEOR UNN Merchandise</h1>
+      <p class="eyebrow">Show your support with our exclusive ISPOR gear</p>
     </section>
 
-    <section class="section reveal">
-      <div class="card glass maxw-900 reveal">
-        <form class="form" action="#" method="post">
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Full Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required />
+    <section id="merchandise" class="section">
+  <div class="products-grid grid grid-2">
+        <!-- ISPOR Polo -->
+        <div class="product-card reveal">
+          <div class="product-media">
+            <img src="./assets/images/merch/merch polo.jpg" alt="ISPOR Polo" loading="lazy" onerror="this.src='./assets/images/home/hero_1.jpg'">
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">ISPOR Polo</h3>
+            <p class="product-desc">Premium quality polo shirt with ISPOR-HEOR UNN branding. Available in multiple sizes.</p>
+            <div class="product-meta">
+              <div class="price">₦5,000</div>
+              <a class="btn btn-outline" href="https://wa.link/srbjfv" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>Order</span></a>
             </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <!-- ISPOR Bucket Hat -->
+        <div class="product-card reveal">
+          <div class="product-media">
+            <img src="./assets/images/merch/merch bucket hat.jpg" alt="ISPOR Bucket Hat" loading="lazy" onerror="this.src='./assets/images/home/hero_2.jpg'">
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">ISPOR Bucket Hat</h3>
+            <p class="product-desc">Stylish bucket hat featuring the ISPOR logo. Perfect for outdoor events and outreaches.</p>
+            <div class="product-meta">
+              <div class="price">₦4,000</div>
+              <a class="btn btn-outline" href="https://wa.link/srbjfv" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>Order</span></a>
             </div>
           </div>
-          <div class="field">
-            <label for="subject">Subject</label>
-            <input id="subject" name="subject" type="text" placeholder="How can we help?" required />
+        </div>
+
+        <!-- ISPOR Face Cap -->
+        <div class="product-card reveal">
+          <div class="product-media">
+            <img src="./assets/images/merch/merch facecap.jpg" alt="ISPOR Face Cap" loading="lazy" onerror="this.src='./assets/images/home/hero_3.jpg'">
           </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+          <div class="product-body">
+            <h3 class="product-title">ISPOR Face Cap</h3>
+            <p class="product-desc">Classic face cap with embroidered ISPOR-HEOR UNN logo. Comfortable and durable.</p>
+            <div class="product-meta">
+              <div class="price">₦3,000</div>
+              <a class="btn btn-outline" href="https://wa.link/srbjfv" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>Order</span></a>
+            </div>
           </div>
-          <div>
-            <button class="btn" type="submit"><i class="bi bi-send"></i><span>Send Message</span></button>
+        </div>
+
+        <!-- ISPOR Tote Bag -->
+        <div class="product-card reveal">
+          <div class="product-media">
+            <img src="./assets/images/merch/merch tote bag.jpg" alt="ISPOR Tote Bag" loading="lazy" onerror="this.src='./assets/images/home/hero_4.jpg'">
           </div>
-        </form>
+          <div class="product-body">
+            <h3 class="product-title">ISPOR Tote Bag</h3>
+            <p class="product-desc">Eco-friendly tote bag with ISPOR branding. Perfect for carrying books, supplies, or groceries.</p>
+            <div class="product-meta">
+              <div class="price">₦4,000</div>
+              <a class="btn btn-outline" href="https://wa.link/srbjfv" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><span>Order</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top:32px; background:#f0f9ff; border-color:#bae6fd;">
+        <h3 style="margin:0 0 12px; color:#0369a1;">How to Order</h3>
+        <ol style="margin:0; padding-left:20px; color:#374151;">
+          <li style="margin-bottom:8px;">Click the "Order Now" button on your desired item</li>
+          <li style="margin-bottom:8px;">You'll be redirected to our WhatsApp</li>
+          <li style="margin-bottom:8px;">Send us a message with the item name, size (if applicable), and quantity</li>
+          <li style="margin-bottom:8px;">Our team will confirm availability and provide payment details</li>
+          <li>Pickup or delivery will be arranged once payment is confirmed</li>
+        </ol>
+        <p style="margin:16px 0 0; color:#6b7280;"><i class="bi bi-info-circle"></i> <strong>Note:</strong> All purchases support ISPOR-HEOR UNN activities and community outreach programs.</p>
       </div>
     </section>
   </main>
@@ -133,14 +180,11 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div>Copyright © 2025 ISPOR-HEOR UNN Student Chapter</div>
-      <div>The Professional Society for Health Economics and Outcomes Research</div>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2025 ISPOR-HEOR UNN Student Chapter. All rights reserved.</p></div>
   </footer>
 
   <script src="./scripts/components.js"></script>
-  <script src="./index.js"></script>
   <!-- Donate modal removed per request (QR no longer displayed) -->
+  <script src="./index.js"></script>
 </body>
 </html>

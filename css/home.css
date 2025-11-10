@@ -16,9 +16,12 @@
 .stat .label, .stat-card .label { color: #4b5563; font-weight: 600; margin-top: 2px; }
 
 /* Hero video banner */
-.hero-video { max-width: 1100px; margin: 24px auto 0; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background: #000; }
+.hero-video { max-width: 1100px; margin: 24px auto 0; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background: #000; position: relative; }
 .hero-video video { width: 100%; height: 400px; object-fit: cover; }
 @media (max-width: 700px) { .hero-video video { height: 300px; } }
+.video-mute-btn { position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,0.6); color: #fff; border: none; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 20px; transition: all 0.3s ease; z-index: 10; backdrop-filter: blur(4px); }
+.video-mute-btn:hover { background: rgba(0,0,0,0.8); transform: scale(1.1); }
+.video-mute-btn:focus { outline: 2px solid #27AAE2; outline-offset: 2px; }
 
 /* Video modal */
 #video-container-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.68); display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0.98); pointer-events: none; transition: opacity .3s ease, transform .3s ease; z-index: 1000; padding: 8px; }

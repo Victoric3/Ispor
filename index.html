@@ -82,8 +82,9 @@
               <a href="publications.html#news"><i class="bi bi-newspaper" style="color:var(--brand-blue)"></i> News</a>
             </div>
           </details>
+          <a href="shop.html" class="nav-link"><i class="bi bi-bag"></i> Shop</a>
         </nav>
-        <div><a class="btn donate-link" href="#"><span>Donate</span><i class="bi bi-heart-fill"></i></a></div>
+  <div><a class="btn donate-link" href="https://wa.link/srbjfv" target="_blank" rel="noopener"><span>Donate</span><i class="bi bi-heart-fill"></i></a></div>
       </div>
     </header>
     <div class="mobile-backdrop"></div>
@@ -137,15 +138,18 @@
             <p class="muted" style="max-width: 780px; margin: 16px auto 0; font-size: 18px;">Advancing HEOR excellence to transform healthcare decision-making globally through education, research, and multidisciplinary collaboration.</p>
             <div class="mt-20" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
               <button class="btn" onclick="openVideo()"><i class="bi bi-play-circle-fill"></i><span>Watch video</span></button>
-              <a class="btn" href="https://wa.link/m7cgxx" target="_blank" rel="noopener"><span>Sponsor</span><i class="bi bi-heart-fill"></i></a>
+              <a class="btn" href="https://wa.link/srbjfv" target="_blank" rel="noopener"><span>Sponsor</span><i class="bi bi-heart-fill"></i></a>
             </div>
           </div>
 
           <div class="hero-video">
-            <video loading="lazy" autoplay loop muted playsinline poster="./assets/images/home/hero_1.jpg">
+            <video id="hero-video" loading="lazy" autoplay loop muted playsinline poster="./assets/images/home/hero_1.jpg">
               <source data-src="./assets/videos/hero-video.mp4" type="video/mp4">
               <source src="./assets/videos/hero-video.mp4" type="video/mp4">
             </video>
+            <button id="video-mute-toggle" class="video-mute-btn" aria-label="Unmute video" title="Unmute">
+              <i class="bi bi-volume-mute-fill"></i>
+            </button>
           </div>
         </div>
     </section>
@@ -192,7 +196,7 @@
               <div class="avatar-stack" style="display:flex; flex-wrap:wrap; gap:8px;">
                 <img class="avatar" src="./assets/images/people/favour-chinemeogo-augustine.jpg" alt="Favour Chinemeogo Augustine" title="Secretary General" loading="lazy">
                 <img class="avatar" src="./assets/images/people/sunday-james-ebenezer.jpg" alt="Sunday James Ebenezer" title="Research Chairperson" loading="lazy">
-                <img class="avatar" src="./assets/images/people/eze-pascal-chisom.jpg" alt="Eze Pascal Chisom" title="Media & Publicity Chair I" loading="lazy">
+                <img class="avatar" src="./assets/images/people/eze-pascal-chisom.jpg" alt="Eze Pascal Chisom" title="Media & Publicity Chairperson I" loading="lazy">
                 <img class="avatar" src="./assets/images/people/ali-sarah-ifeoma.jpg" alt="Ali Sarah Ifeoma" title="IPHAC Chairperson I" loading="lazy">
                 <img class="avatar" src="./assets/images/people/ogunjobi-bamidele-victor.jpg" alt="Ogunjobi Bamidele Victor" title="Editor-in-Chief II" loading="lazy">
               </div>
@@ -215,20 +219,32 @@
         <h2>Outreach Impact</h2>
         <div class="grid grid-3">
           <div class="card reveal">
-            <div class="thumb"><img src="./assets/images/home/hero_5.jpg" alt="ISPOR 1000 4.0 - Project Dent O'Clock"></div>
+            <div class="thumb"><img src="./assets/images/outreaches/ispor-1000-dent-oclock/1.jpg" alt="ISPOR 1000 4.0 - Project Dent O'Clock" onerror="this.src='assets/images/home/hero_1.jpg'"></div>
             <div class="meta">Project Dent O'Clock • June 2025</div>
-            <div class="mt-20" style="margin-top:8px;"><a class="link" href="https://drive.google.com/drive/folders/1ogdeiPliHoFfNBP-U0Cqh8xKB2v_kHWd" target="_blank" rel="noopener">View Photos</a></div>
+            <div class="mini-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px;">
+              <img src="./assets/images/outreaches/ispor-1000-dent-oclock/2.jpg" alt="Dent O'Clock 2" loading="lazy" onerror="this.style.display='none'">
+              <img src="./assets/images/outreaches/ispor-1000-dent-oclock/3.jpg" alt="Dent O'Clock 3" loading="lazy" onerror="this.style.display='none'">
+              <img src="./assets/images/outreaches/ispor-1000-dent-oclock/4.jpg" alt="Dent O'Clock 4" loading="lazy" onerror="this.style.display='none'">
+            </div>
           </div>
           <div class="card reveal">
-            <div class="thumb"><img src="./assets/images/home/hero_6.jpg" alt="Mental Health Day Outreach"></div>
+            <div class="thumb"><img src="./assets/images/outreaches/mental-health-day-2025-10-11/1.jpg" alt="Mental Health Day Outreach" onerror="this.src='assets/images/home/hero_2.jpg'"></div>
             <div class="meta">Mental Health Day Outreach • Oct 11, 2025</div>
-            <div class="mt-20" style="margin-top:8px;"><a class="link" href="https://drive.google.com/drive/folders/11_27EVGZjR4gxd5z4n7ftTKHSbPPq2_7" target="_blank" rel="noopener">View Photos</a></div>
+            <div class="mini-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px;">
+              <img src="./assets/images/outreaches/mental-health-day-2025-10-11/2.jpg" alt="Mental Health Day 2" loading="lazy" onerror="this.style.display='none'">
+              <img src="./assets/images/outreaches/mental-health-day-2025-10-11/3.jpg" alt="Mental Health Day 3" loading="lazy" onerror="this.style.display='none'">
+              <img src="./assets/images/outreaches/mental-health-day-2025-10-11/4.jpg" alt="Mental Health Day 4" loading="lazy" onerror="this.style.display='none'">
+            </div>
           </div>
-          <div class="card reveal">
-            <div class="thumb"><img src="./assets/images/home/hero_4.jpg" alt="Reproductive Health Outreach"></div>
-            <div class="meta">Reproductive Health Outreach • Aug 29, 2024</div>
-            <div class="mt-20" style="margin-top:8px;"><a class="link" href="https://drive.google.com/drive/folders/1DuViGepRKYCQkhJL0t5i2nBT6gGuzUMi" target="_blank" rel="noopener">View Photos</a></div>
-          </div>
+            <div class="card reveal">
+              <div class="thumb"><img src="./assets/images/outreaches/reproductive-health-2024-08-29/1.jpg" alt="Reproductive Health Outreach" onerror="this.src='assets/images/home/hero_3.jpg'"></div>
+              <div class="meta">Reproductive Health Outreach • Aug 29, 2024</div>
+              <div class="mini-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px;">
+                <img src="./assets/images/outreaches/reproductive-health-2024-08-29/2.jpg" alt="Reproductive Health 2" loading="lazy" onerror="this.style.display='none'">
+                <img src="./assets/images/outreaches/reproductive-health-2024-08-29/3.jpg" alt="Reproductive Health 3" loading="lazy" onerror="this.style.display='none'">
+                <img src="./assets/images/outreaches/reproductive-health-2024-08-29/4.jpg" alt="Reproductive Health 4" loading="lazy" onerror="this.style.display='none'">
+              </div>
+            </div>
         </div>
         <div class="center mt-20"><a class="btn" href="outreaches.html">Explore Outreaches</a></div>
       </div>
@@ -253,7 +269,7 @@
           <div class="card reveal">
             <div class="media">
               <img class="avatar" src="./assets/images/people/eze-pascal-chisom.jpg" alt="Eze Pascal Chisom">
-              <div><h3 style="margin:4px 0;">Eze Pascal Chisom</h3><div class="muted">Media & Publicity Chair I</div></div>
+              <div><h3 style="margin:4px 0;">Eze Pascal Chisom</h3><div class="muted">Media & Publicity Chairperson I</div></div>
             </div>
           </div>
         </div>
@@ -267,7 +283,7 @@
         <div class="card">
           <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
               <div class="muted">Help us transform healthcare through education and research</div>
-              <a class="btn donate-link" href="#">Donate Now</a>
+              <a class="btn donate-link" href="https://wa.link/srbjfv" target="_blank" rel="noopener">Donate Now</a>
           </div>
           <div style="margin-top:12px;">
             <div style="display:flex; justify-content:space-between; font-weight:600; font-size:14px;"><span>Campaign Progress</span><span class="muted">₦5M of ₦10M</span></div>
@@ -279,21 +295,7 @@
       </div>
     </section>
 
-      <!-- Donate QR Modal (global) -->
-      <div id="donate-modal-bg" class="donate-modal-bg" aria-hidden="true">
-        <div class="donate-modal" role="dialog" aria-modal="true" aria-labelledby="donate-modal-title">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 id="donate-modal-title" style="margin:0;">Donate via WhatsApp</h3>
-            <button class="donate-close close" aria-label="Close">&times;</button>
-          </div>
-          <p class="muted" style="margin:0;">Scan the QR code with WhatsApp or tap Open WhatsApp to continue.</p>
-          <img class="qr" src="./assets/images/home/wa.link_m7cgxx.png" alt="Donate - WhatsApp QR" loading="lazy">
-          <div class="actions">
-            <a class="btn" href="https://wa.link/m7cgxx" target="_blank" rel="noopener">Open WhatsApp</a>
-            <button class="btn donate-close" type="button">Close</button>
-          </div>
-        </div>
-      </div>
+      <!-- Donate modal removed per request (QR no longer displayed) -->
 
     <section class="container" style="padding: 40px 24px;">
         <h3 style="font-size: 32px; text-align:center; margin:0 0 12px;">FAQs</h3>
@@ -360,6 +362,14 @@
             <a href="about.html#mission">Our Mission</a>
             <a href="about.html#leadership">Leadership</a>
             <a href="about.html#awards">Awards</a>
+          </div>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <div style="display:grid; gap:8px;">
+            <a href="contact.html">Contact Us</a>
+            <a href="team.html">Our Team</a>
+            <a href="shop.html">Shop</a>
           </div>
         </div>
       </div>

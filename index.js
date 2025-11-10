@@ -12,6 +12,25 @@ const navToggles = document.querySelectorAll('[id^="nav-dropdown-toggle-"]')
 const navDropdowns = document.querySelectorAll('[id^="nav-dropdown-list-"]')
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Hero video mute/unmute toggle
+    const heroVideo = document.getElementById('hero-video')
+    const muteToggle = document.getElementById('video-mute-toggle')
+    if (heroVideo && muteToggle) {
+        muteToggle.addEventListener('click', function() {
+            if (heroVideo.muted) {
+                heroVideo.muted = false
+                muteToggle.innerHTML = '<i class="bi bi-volume-up-fill"></i>'
+                muteToggle.setAttribute('aria-label', 'Mute video')
+                muteToggle.setAttribute('title', 'Mute')
+            } else {
+                heroVideo.muted = true
+                muteToggle.innerHTML = '<i class="bi bi-volume-mute-fill"></i>'
+                muteToggle.setAttribute('aria-label', 'Unmute video')
+                muteToggle.setAttribute('title', 'Unmute')
+            }
+        })
+    }
+
     // Initialize particles only if the target exists
     if (window.particlesJS && document.getElementById('particles-js')) {
         particlesJS('particles-js', {
@@ -70,36 +89,41 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
     }
 
-    // Donate QR modal behavior
+    // Donate links: open WhatsApp directly (no QR modal)
     const donateLinks = document.querySelectorAll('.donate-link');
     const donateModalBg = document.getElementById('donate-modal-bg');
-    const donateOpenBtn = document.getElementById('donate-open-btn');
     const donateCloseBtns = document.querySelectorAll('.donate-close');
-    const DONATE_URL = 'https://wa.link/m7cgxx';
+    const DONATE_URL = 'https://wa.link/srbjfv';
 
-    function openDonateModal(openExternal = false){
-        if (openExternal) window.open(DONATE_URL, '_blank');
-        if (!donateModalBg) return;
-        donateModalBg.classList.add('show');
-        document.body.classList.add('modal-open');
-    }
-    function closeDonateModal(){
-        if (!donateModalBg) return;
-        donateModalBg.classList.remove('show');
-        document.body.classList.remove('modal-open');
-    }
-
+    // Ensure donate buttons point to WhatsApp directly
     if (donateLinks.length) {
+        donateLinks.forEach(a => {
+            a.setAttribute('href', DONATE_URL);
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener');
+        });
+    }
+
+    // Backward compatibility: only wire modal listeners if the modal exists on page
+    if (donateModalBg && donateLinks.length) {
+        function openDonateModal(openExternal = false){
+            if (openExternal) window.open(DONATE_URL, '_blank');
+            donateModalBg.classList.add('show');
+            document.body.classList.add('modal-open');
+        }
+        function closeDonateModal(){
+            donateModalBg.classList.remove('show');
+            document.body.classList.remove('modal-open');
+        }
         donateLinks.forEach(a => {
             a.addEventListener('click', (e) => {
                 e.preventDefault();
-                // open external wa.link in a new tab and show modal with QR
                 openDonateModal(true);
             });
         });
+        donateCloseBtns.forEach(b => b.addEventListener('click', closeDonateModal));
+        donateModalBg.addEventListener('click', (e) => { if (e.target === donateModalBg) closeDonateModal(); });
     }
-    donateCloseBtns.forEach(b => b.addEventListener('click', closeDonateModal));
-    if (donateModalBg) donateModalBg.addEventListener('click', (e) => { if (e.target === donateModalBg) closeDonateModal(); });
 
     // Reveal-on-scroll animations (CSS-based)
     const revealEls = document.querySelectorAll('.reveal');
@@ -431,37 +455,65 @@ function initFaqAccordions(){
     faqAccordion.forEach(function (btn) {
         btn.setAttribute('role', 'button')
         btn.setAttribute('tabindex', '0')
-        btn.addEventListener('click', toggleFaq)
-        btn.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq.call(btn) } })
+        btn.setAttribute('aria-expanded','false')
+        const panel = btn.nextElementSibling
+        if (panel) {
+            panel.style.overflow = 'hidden'
+            panel.style.transition = 'max-height 0.35s ease, padding 0.35s ease'
+            panel.style.maxHeight = '0px'
+            panel.setAttribute('aria-hidden','true')
+        }
+        btn.addEventListener('click', () => toggleFaq(btn))
+        btn.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn) } })
     })
 }
 // Try now and on DOM ready (covers scripts injected at very end)
 initFaqAccordions()
 document.addEventListener('DOMContentLoaded', initFaqAccordions)
 
-function toggleFaq(){
-    this.classList.toggle('active')
+function toggleFaq(btn){
+    const allFaqs = document.querySelectorAll('.faq')
+    const item = btn.closest('.faq')
+    const content = btn.nextElementSibling
+    const icon = btn.querySelector('.bi-plus')
+    const isOpen = item.classList.contains('open')
 
-    const content = this.nextElementSibling
-    const icon = this.querySelector('.bi-plus')
-    const item = this.closest('.faq')
-    const isOpen = item && item.classList.contains('open')
+    // Close all others for single-open behavior
+    allFaqs.forEach(f => {
+        if (f !== item && f.classList.contains('open')) {
+            f.classList.remove('open')
+            const hdr = f.querySelector('.faq-accordion')
+            const panel = hdr && hdr.nextElementSibling
+            if (hdr) hdr.setAttribute('aria-expanded','false')
+            if (panel) {
+                panel.style.maxHeight = '0px'
+                panel.style.padding = '0px 16px'
+                panel.setAttribute('aria-hidden','true')
+            }
+            const ic = f.querySelector('.faq-accordion .bi-plus')
+            if (ic) ic.style.transform = 'rotate(0deg)'
+        }
+    })
 
     if (isOpen) {
+        item.classList.remove('open')
+        btn.setAttribute('aria-expanded','false')
         content.style.maxHeight = '0px'
         content.style.padding = '0px 16px'
+        content.setAttribute('aria-hidden','true')
         if (icon) icon.style.transform = 'rotate(0deg)'
-        item.classList.remove('open')
-        this.setAttribute('aria-expanded', 'false')
-        content.setAttribute('aria-hidden', 'true')
     } else {
-        // Measure content and expand to full height
-        content.style.maxHeight = content.scrollHeight + 'px'
-        content.style.padding = '16px'
-        if (icon) icon.style.transform = 'rotate(45deg)'
         item.classList.add('open')
-        this.setAttribute('aria-expanded', 'true')
-        content.setAttribute('aria-hidden', 'false')
+        btn.setAttribute('aria-expanded','true')
+        // Prepare to measure
+        content.style.maxHeight = 'none'
+        content.style.padding = '16px'
+        const full = content.scrollHeight
+        content.style.maxHeight = '0px'
+        content.offsetHeight // reflow
+        content.style.maxHeight = full + 'px'
+        content.setAttribute('aria-hidden','false')
+        if (icon) icon.style.transform = 'rotate(45deg)'
     }
 }
 
