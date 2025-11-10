@@ -453,6 +453,10 @@ function initFaqAccordions(){
     const faqAccordion = document.querySelectorAll('.faq-accordion')
     if (!faqAccordion.length) return
     faqAccordion.forEach(function (btn) {
+        // Prevent duplicate bindings if this is called more than once
+        if (btn.dataset.faqBound === 'true') return
+        btn.dataset.faqBound = 'true'
+
         btn.setAttribute('role', 'button')
         btn.setAttribute('tabindex', '0')
         btn.setAttribute('aria-expanded','false')
@@ -467,8 +471,7 @@ function initFaqAccordions(){
         btn.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn) } })
     })
 }
-// Try now and on DOM ready (covers scripts injected at very end)
-initFaqAccordions()
+// Initialize on DOM ready only
 document.addEventListener('DOMContentLoaded', initFaqAccordions)
 
 function toggleFaq(btn){
@@ -505,12 +508,9 @@ function toggleFaq(btn){
     } else {
         item.classList.add('open')
         btn.setAttribute('aria-expanded','true')
-        // Prepare to measure
-        content.style.maxHeight = 'none'
+        // Measure full height directly to avoid font/load timing issues
         content.style.padding = '16px'
-        const full = content.scrollHeight
-        content.style.maxHeight = '0px'
-        content.offsetHeight // reflow
+        const full = content.scrollHeight || content.getBoundingClientRect().height
         content.style.maxHeight = full + 'px'
         content.setAttribute('aria-hidden','false')
         if (icon) icon.style.transform = 'rotate(45deg)'

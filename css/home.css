@@ -38,7 +38,7 @@
 .faq .content { padding: 0 16px; color: #374151; max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s ease; }
 .faq.open .faq-accordion i { transform: rotate(45deg); }
 /* Let JS control max-height dynamically for any content size */
-.faq.open .content { padding: 16px; }
+.faq.open .content { padding: 16px; max-height: 2000px; }
 
 /* Newsletter */
 .newsletter { display: grid; gap: 12px; align-items: center; justify-content: space-between; grid-template-columns: 1fr auto; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; max-width: 900px; margin: 0 auto; }

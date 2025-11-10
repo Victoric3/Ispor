@@ -31,9 +31,18 @@ function Download-GDriveFolder {
     [Parameter(Mandatory=$true)][string]$OutDir
   )
   if (!(Test-Path -LiteralPath $OutDir)) { New-Item -ItemType Directory -Path $OutDir -Force | Out-Null }
+  # Build a working command for gdown across environments
+  $cmd = $null
   if (Test-CommandExists -Name 'gdown') {
+    $cmd = "gdown --folder --id $Id -O `"$OutDir`""
+  } elseif (Test-CommandExists -Name 'py') {
+    $cmd = "py -m gdown --folder --id $Id -O `"$OutDir`""
+  } elseif (Test-CommandExists -Name 'python') {
+    $cmd = "python -m gdown --folder --id $Id -O `"$OutDir`""
+  }
+
+  if ($null -ne $cmd) {
     try {
-      $cmd = "gdown --folder --id $Id -O `"$OutDir`""
       Write-Host "Running: $cmd" -ForegroundColor Cyan
       $proc = Start-Process powershell -ArgumentList "-NoProfile","-Command", $cmd -Wait -PassThru
       if ($proc.ExitCode -ne 0) { throw "gdown exited with code $($proc.ExitCode)" }
@@ -42,7 +51,7 @@ function Download-GDriveFolder {
       Write-Warning "Failed to download folder ($Id) -> $($_.Exception.Message)"
     }
   } else {
-    Write-Warning "gdown not found. Install it to enable Google Drive folder downloads: python -m pip install gdown"
+    Write-Warning "gdown not found. Install it to enable Google Drive folder downloads: py -m pip install --user gdown"
   }
 }
 
@@ -84,6 +93,22 @@ if ($Publications) {
     @{ Id = '1n66smWOpWybUEYvyTruD1tGrwP44wXAx'; OutDir = 'assets/publications/health-digest-soft-drinks' }
   )
   foreach ($pf in $pubFolders) { Download-GDriveFolder -Id $pf.Id -OutDir $pf.OutDir }
+}
+
+if ($Outreaches) {
+  # Outreach folders from IMAGE_DOWNLOAD_GUIDE.md
+  $outreachFolders = @(
+    @{ Id = '1ogdeiPliHoFfNBP-U0Cqh8xKB2v_kHWd'; OutDir = 'assets/images/outreaches/ispor1000' }, # ISPOR 1000 - Project Dent O'Clock
+    @{ Id = '1DuViGepRKYCQkhJL0t5i2nBT6gGuzUMi'; OutDir = 'assets/images/outreaches/reproductive-health' }, # Reproductive Health Outreach
+    @{ Id = '1Eu8SC9xqdJEpGk1ECoQ4YSWvwLL_2EXy'; OutDir = 'assets/images/outreaches/ibagwa-ani' }, # Community Outreach - IBAGWA-ANI
+    @{ Id = '11_27EVGZjR4gxd5z4n7ftTKHSbPPq2_7'; OutDir = 'assets/images/outreaches/mental-health' }, # Mental Health Day Outreach
+    @{ Id = '1dN9DyK07NkJ5ohXPdPbhN-MGg5SyVgQu'; OutDir = 'assets/images/outreaches/assemblies-god' }, # Vital Signs - Assemblies of God Church
+    @{ Id = '1V4En_jAdSNoGPgwdKqOvLkclN5_w5Trf'; OutDir = 'assets/images/outreaches/health-walk' }  # Health Walk on Infectious Diseases
+  )
+  foreach ($of in $outreachFolders) { Download-GDriveFolder -Id $of.Id -OutDir $of.OutDir }
+
+  # Single-file download for Vital Signs Outreach at UNN
+  Download-GDriveFile -Id '1M9Rd6RqMp9hN2nhnFQGg2OrY_XinFf4x' -OutFile 'assets/images/outreaches/vital-signs-unn.jpg'
 }
 
 Write-Host "Done." -ForegroundColor Cyan
