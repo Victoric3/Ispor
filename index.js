@@ -462,9 +462,6 @@ function initFaqAccordions(){
         btn.setAttribute('aria-expanded','false')
         const panel = btn.nextElementSibling
         if (panel) {
-            panel.style.overflow = 'hidden'
-            panel.style.transition = 'max-height 0.35s ease, padding 0.35s ease'
-            panel.style.maxHeight = '0px'
             panel.setAttribute('aria-hidden','true')
         }
         btn.addEventListener('click', () => toggleFaq(btn))
@@ -489,8 +486,6 @@ function toggleFaq(btn){
             const panel = hdr && hdr.nextElementSibling
             if (hdr) hdr.setAttribute('aria-expanded','false')
             if (panel) {
-                panel.style.maxHeight = '0px'
-                panel.style.padding = '0px 16px'
                 panel.setAttribute('aria-hidden','true')
             }
             const ic = f.querySelector('.faq-accordion .bi-plus')
@@ -501,17 +496,11 @@ function toggleFaq(btn){
     if (isOpen) {
         item.classList.remove('open')
         btn.setAttribute('aria-expanded','false')
-        content.style.maxHeight = '0px'
-        content.style.padding = '0px 16px'
         content.setAttribute('aria-hidden','true')
         if (icon) icon.style.transform = 'rotate(0deg)'
     } else {
         item.classList.add('open')
         btn.setAttribute('aria-expanded','true')
-        // Measure full height directly to avoid font/load timing issues
-        content.style.padding = '16px'
-        const full = content.scrollHeight || content.getBoundingClientRect().height
-        content.style.maxHeight = full + 'px'
         content.setAttribute('aria-hidden','false')
         if (icon) icon.style.transform = 'rotate(45deg)'
     }
