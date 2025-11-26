@@ -72,14 +72,33 @@ img { display: block; max-width: 100%; }
 .section .hint { color: var(--brand-blue); font-size: 14px; }
 .section .note { color: var(--muted); font-size: 14px; }
 
-.grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 768px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.grid { display: grid; gap: 12px; grid-template-columns: repeat(1, minmax(0, 1fr)); }
+@media (min-width: 600px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .card-thumb { border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; background: #fff; }
 .card-thumb img { height: 160px; width: 100%; object-fit: cover; }
 
+/* 'See more' tile used in grids to link to full publication pages */
+/* Removed in-grid 'see more' tile; keep CTA below the preview centered */
+.card-thumb.see-more .see-more-inner { font-weight: 700; font-size: 16px; }
+
+/* Fancy see more button used below preview grids */
+.see-more-row { margin-top: 12px; display: flex; justify-content: center; width: 100%; }
+/* On larger screens the in-grid see-more tile replaces the below CTA, so hide this row */
+/* Keep the row CTA visible across breakpoints so it remains centered under each edition */
+.see-more-btn { display: inline-flex; gap:10px; align-items: center; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(39,170,226,0.18); background: linear-gradient(90deg, #fff, #f8fbff); color: var(--brand-blue); box-shadow: 0 8px 24px rgba(39,170,226,0.06); text-decoration:none; font-weight:700; }
+.see-more-btn i { margin-left: 6px; }
+.see-more-btn:hover { transform: translateX(4px); box-shadow: 0 12px 30px rgba(39,170,226,0.12); }
+
+/* Newsletters & previews grid for multiple publications */
+.pub-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+
 /* Footer */
 .footer { margin-top: auto; background: #fff; border-top: 1px solid var(--border); }
-.footer-inner { padding: 40px 24px; display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.footer-inner { padding: 40px 24px; display: grid; gap: 24px; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 768px) { .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .footer-inner { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .footer .brand { flex-direction: column; text-align: center; }
 .footer h3 { margin: 0 0 8px; font-size: 18px; }
 .footer a { color: #111827; }

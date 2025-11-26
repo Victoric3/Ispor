@@ -42,6 +42,13 @@ All 5 images are in the "Active ISPORites/Awards 2024" Google Drive folder:
 
 ---
 
+### 3. September 2025 Newsletter
+**Destination**: `assets/publications/newsletter-2025-09/`
+
+- The September 2025 newsletter folder appears in the codebase but is currently empty (no pages were downloaded). Please add the PDF or the split page JPGs into `assets/publications/newsletter-2025-09/`.
+
+If you have the PDF, split it into pages (Page 1.JPG, Page 2.JPG, etc.) and upload. The `download_assets.ps1` script also attempts to download the Google Drive folder if you have the Drive ID.
+
 ## ✅ Already Downloaded (No Action Needed)
 
 ### Current Leaders (22 photos) ✓

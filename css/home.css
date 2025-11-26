@@ -55,8 +55,11 @@
 .section h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 64px; height: 3px; background: linear-gradient(90deg, #27AAE2, #0891b2); border-radius: 999px; }
 
 /* Uniform thumbnails for grids */
-.thumb { width: 100%; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: #eef2f7; }
+.thumb { width: 100%; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; background: #eef2f7; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Ensure images inside mini-grids are square as well */
+.mini-grid img { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; display: block; }
 
 /* Meta text under cards */
 .meta { margin-top: 6px; color: #6b7280; font-size: 14px; }
@@ -69,3 +72,8 @@
 #mission .feature { display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: start; background: rgba(255,255,255,0.7); border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
 #mission .feature .icon-tile { height: 48px; width: 48px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg,#27AAE2,#38bdf8); color: #fff; font-size: 24px; box-shadow: 0 8px 24px rgba(39,170,226,0.25); }
 #mission .feature .text { color: #374151; font-weight: 600; }
+
+/* Restore leadership highlight avatar size and strong headings */
+#leadership-highlight .avatar-stack img.avatar { width: 110px; height: 110px; border-radius: 12px; object-fit: cover; border: 3px solid rgba(255,255,255,0.8); }
+#leadership-highlight .media h3 { margin: 8px 0; font-size: 20px; }
+#leadership-highlight .media .muted { font-size: 14px; color: #6b7280; }

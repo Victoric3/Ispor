@@ -138,6 +138,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }, { threshold: 0.12 });
         revealEls.forEach(el => io.observe(el));
     }
+
+    // Header: support hover-to-show for nav menus on hover-capable devices
+    (function enableHoverNav(){
+        const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (!canHover) return; // only apply for devices that support hover
+
+        let lastPointerType = 'mouse';
+        document.addEventListener('pointerdown', (ev) => { lastPointerType = ev.pointerType || 'mouse'; });
+        document.addEventListener('keydown', () => { lastPointerType = 'keyboard'; });
+
+        const detailsElements = document.querySelectorAll('.nav details');
+        detailsElements.forEach(details => {
+            const summary = details.querySelector('summary');
+            
+            // Open on hover
+            details.addEventListener('mouseenter', () => {
+                details.open = true;
+            });
+
+            // Close on leave
+            details.addEventListener('mouseleave', () => {
+                details.open = false;
+            });
+
+            // Keep the click prevention for the summary to avoid double-toggling
+            if (summary) {
+                summary.addEventListener('click', (e) => {
+                    // If we are in a hover-capable mode, we generally want hover to handle open/close.
+                    // However, clicking 'summary' usually toggles. 
+                    // If it's already open (via hover), a click would close it.
+                    // If it's closed, a click would open it.
+                    // The original code prevented opening via click if it was closed.
+                    // We can keep that logic if we want to enforce "hover only" for opening.
+                    if (!details.open && lastPointerType === 'mouse') {
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    })();
 });
 
 // Update your video functions
