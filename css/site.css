@@ -48,6 +48,10 @@ a {
   height: 80px;
 }
 
+/* Utilities: center text & spacing */
+.center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+
 /* Links and text helpers */
 .link {
   color: var(--brand-blue);
@@ -680,3 +684,14 @@ a {
     object-fit: cover;
   }
 }
+
+/* Most Active (Awards) grid - use larger thumbnail images that fill the card */
+.most-active .card .thumb img { aspect-ratio: 4 / 5; width: 100%; height: auto; object-fit: cover; border-radius: 12px; }
+.most-active .card .media { gap: 12px; align-items: center; }
+@media (max-width: 700px) {
+  .most-active .card .thumb img { aspect-ratio: 1 / 1; }
+}
+
+/* About page leadership preview avatars */
+#leadership .avatar-stack img.avatar, #leaders .card .media img.avatar { width: 100px; height: 100px; border-radius: 8px; object-fit: cover; }
+#leadership .media h3, #leaders .card .media h3 { margin: 8px 0; font-size: 18px; }
